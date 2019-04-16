@@ -1,0 +1,2 @@
+﻿id,event_name,organiser_id,start_date,end_date,address,price,description,image,available_tickets
+int,varchar(100),int,dateTime,dateTime,,,,,
