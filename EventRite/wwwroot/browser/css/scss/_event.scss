@@ -1,0 +1,31 @@
+.event-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px lightgrey;
+}
+
+
+.event-container > *{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.event-container--image {
+    padding: 0;
+}
+
+.event-container--image img {
+    width: 100%;
+}
+
+.event-container--tickets > button {
+    width: 50%;
+}
+
+.event-container--map {
+    padding: 0px;
+}
+
+.event-container--map iframe {
+    width: 100%;
+}
