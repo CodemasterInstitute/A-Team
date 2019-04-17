@@ -6,7 +6,7 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/nav.php"; 
 ?>
-  <div id="heroSlider" class="carousel slide" data-ride="carousel">
+  <div class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="https://via.placeholder.com/1920x500/333333" alt="First slide">
