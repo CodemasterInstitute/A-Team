@@ -36,8 +36,9 @@
 }
 
 .event-container > * {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
 }
 
 .event-container--image {
@@ -46,17 +47,21 @@
 
 .event-container--image img {
   width: 100%;
+  margin: 0;
 }
 
 .event-container--tickets > button {
-  width: 50%;
+  width: 94%;
 }
 
 .event-container--map {
   padding: 0px;
+  width: 100%;
 }
 
 .event-container--map iframe {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 /*# sourceMappingURL=styles.css.map */
