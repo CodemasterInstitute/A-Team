@@ -7,7 +7,7 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/nav.php"; 
 
 
-        // HOME PAGE CONTENT GOES HERE
+       print '<h1>hello</h1>';
 
 
 
