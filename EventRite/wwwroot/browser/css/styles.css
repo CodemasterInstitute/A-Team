@@ -1,5 +1,32 @@
-h1 {
-  color: green;
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
 
 .event-container {
@@ -9,9 +36,8 @@ h1 {
 }
 
 .event-container > * {
-  margin-left: 3%;
-  margin-right: 3%;
-  width: 94%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .event-container--image {
@@ -20,22 +46,17 @@ h1 {
 
 .event-container--image img {
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .event-container--tickets > button {
-  width: 94%;
+  width: 50%;
 }
 
 .event-container--map {
-  width: 100%;
   padding: 0px;
 }
 
 .event-container--map iframe {
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 }
 /*# sourceMappingURL=styles.css.map */
