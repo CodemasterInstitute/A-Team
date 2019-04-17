@@ -13,5 +13,5 @@
 
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php"; 
-
+    
 ?>
