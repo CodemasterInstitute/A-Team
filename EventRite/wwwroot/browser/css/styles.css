@@ -1,6 +1,14 @@
+h1, h2, h3, .nav-item {
+  Font-Family: 'Raleway', Sans-Serif;
+}
+
+p {
+  Font-Family: 'Open Sans', Sans-Serif;
+  Font-Size: 15px;
+}
+
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -27,6 +35,52 @@
 
 .carousel-fade .carousel-control {
   z-index: 2;
+}
+
+.search-sec {
+  padding: 2rem;
+  z-index: 10;
+  -webkit-transform: translateY(55px);
+      -ms-transform: translateY(55px);
+          transform: translateY(55px);
+}
+
+.search-field {
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  height: calc(3rem + 2px) !important;
+  border-radius: 0;
+}
+
+.wrn-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  height: calc(3rem + 2px) !important;
+  border-radius: 0;
+}
+
+@media (min-width: 992px) {
+  .search-sec {
+    position: relative;
+    top: -114px;
+  }
+}
+
+@media (max-width: 992px) {
+  .search-sec {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    background: #1A4668;
+  }
 }
 
 .event-container {
@@ -58,5 +112,65 @@
 
 .event-container--map iframe {
   width: 100%;
+}
+
+.bg-dark {
+  background-color: #e0004a !important;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #031D44;
+  padding: 10px 0px;
+  margin: 0px 20px;
+  position: relative;
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f9fbfc;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.nav-link::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.row.contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card.contact {
+  margin: 1rem;
+  text-align: center;
+}
+
+.jumbotron.post {
+  background-image: -webkit-gradient(linear, right top, left top, from(#000000), to(#7F8C8D));
+  background-image: linear-gradient(-90deg, #000000, #7F8C8D);
+  text-align: center;
+  margin: 0 auto;
+  color: #f9fbfc;
 }
 /*# sourceMappingURL=styles.css.map */
