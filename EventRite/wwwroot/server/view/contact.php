@@ -5,9 +5,54 @@
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
 
-    
 ?>
+<div class="container">
+<div class="row contact">
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Contact</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+</div>
+
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Socials</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Advertising</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+</div>
+
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">My Account</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+</div>
+
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">FAQs</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+</div>
+
+<div class="card contact" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Legal stuff</h5>
+    <p class="card-text">Maybe more text</p>
+  </div>
+</div>
+
+</div>
+</div>
 
 <!---Contact form-->
 <div>
