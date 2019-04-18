@@ -9,13 +9,13 @@
   <div class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="https://via.placeholder.com/1920x500/333333" alt="First slide">
+        <img class="d-block w-100" src="browser/images/index/slider-image1.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="https://via.placeholder.com/1920x500/37f286" alt="Second slide">
+        <img class="d-block w-100" src="browser/images/index/slider-image2.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="https://via.placeholder.com/1920x500/9a76cd" alt="Third slide">
+        <img class="d-block w-100" src="browser/images/index/slider-image3.jpg" alt="Third slide">
       </div>
     </div>
   </div>
