@@ -8,6 +8,8 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
 
 ?>
+
+<!-- Anchor cards to click down to the section you want info about -->
 <div class="container">
 <div class="row contact">
 <div class="card contact" style="width: 18rem;">
@@ -22,6 +24,7 @@
     <h5 class="card-title">Socials</h5>
     <p class="card-text">Maybe more text</p>
   </div>
+</div>
 
 <div class="card contact" style="width: 18rem;">
   <div class="card-body">
@@ -46,7 +49,7 @@
 
 <div class="card contact" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Legal stuff</h5>
+    <h5 class="card-title">Legal Stuff</h5>
     <p class="card-text">Maybe more text</p>
   </div>
 </div>
@@ -54,15 +57,17 @@
 </div>
 </div>
 
-<!---Contact form-->
-<div>
+<hr>
+
+<!-- Contact section -->
 <div class="container">
 	<div class="row">
+<h2>Contact</h2>
+    <!-- contact form -->
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
           <form class="form-horizontal" action="" method="post">
           <fieldset>
-            <h4 class="text-center pt-2 mt-2">Contact us!</h4>
     
             <!-- Name input-->
             <div class="form-group">
@@ -74,7 +79,7 @@
     
             <!-- Email input-->
             <div class="form-group">
-              <label class="col-md-3 control-label" for="email"><b>Your E-mail</b></label>
+              <label class="col-md-3 control-label" for="email"><b>Email</b></label>
               <div class="col-md-9">
                 <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
               </div>
@@ -98,10 +103,50 @@
           </form>
         </div>
       </div>
-	</div>
-</div>
+    </div>
+    
 </div>
 <!----contact form ends here---->
+<hr>
+
+<div class="container">
+	<div class="row">
+<h2>Socials</h2>
+</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+<h2>Advertising</h2>
+</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+<h2>My Account</h2>
+</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+<h2>FAQs</h2>
+</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+<h2>Legal Stuff</h2>
+</div>
+</div>
+
 <?php
 
    // Inculde Basic Template for <footer>
