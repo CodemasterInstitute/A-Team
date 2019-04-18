@@ -7,34 +7,24 @@ p {
   Font-Size: 15px;
 }
 
-.carousel-fade .carousel-inner .item {
+.carousel-fade .carousel-inner .carousel-item {
   -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
-.carousel-fade .carousel-inner .item,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
+.carousel-fade .carousel-inner .carousel-item img {
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-fade .carousel-inner .carousel-item {
   opacity: 0;
 }
 
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
+.carousel-fade .carousel-inner .active {
   opacity: 1;
-}
-
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.carousel-fade .carousel-control {
-  z-index: 2;
 }
 
 .search-sec {
@@ -158,6 +148,7 @@ p {
 
 .nav-link::before {
   -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   height: 2px;
   content: "";
