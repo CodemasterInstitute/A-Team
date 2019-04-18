@@ -57,7 +57,18 @@
     </div>
 </div>
 
+
+<div class="container card-container">
+  
+<h1>Upcoming Events</h1>
+  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
+  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
+  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
+  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
+</div>
 <?php
+
+    
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php"; 
     
