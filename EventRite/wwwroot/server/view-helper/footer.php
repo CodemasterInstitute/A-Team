@@ -1,10 +1,10 @@
 <?php
 
     print
-    '<footer class="page-footer font-small blue pt-0 mt-0" style= "height:500px">
+    '<footer class="page-footer font-small blue pt-0 mt-0 " style= "height:500px ;  background-color:  #343a40">
 
 
-    <div class="container-fluid text-center bg-dark" style="height: 404px">
+    <div class="container-fluid text-center " style="height: 404px ;  background-color:  #343a40">
 
     
       <div class="row pt-4">
@@ -67,9 +67,12 @@
             <h4 class="text-uppercase text-light">Connect With Us</h4>
             <button type="button" class="btn btn-fb text-light"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
             <button type="button" class="btn btn-tw text-light"><i class="fab fa-twitter pr-1"></i> Twitter</button>
-            <button type="button" class="btn btn-gplus text-light"><i class="fab fa-google-plus-g pr-1"></i> Google +</button><br>
+            <button type="button" class="btn btn-ins text-light"><i class="fab fa-instagram pr-1"></i> Instagram</button>
             
 
+            <div class="pt-5 mt-5">
+            <h4><a href="#" class="text-light">Contact Us</a></h4>
+            </div
           </div>
         
 
@@ -80,7 +83,7 @@
 
 
     
-    <div class="footer-copyright text-center py-3 bg-dark text-light">© 2018 Copyright:
+    <div class="footer-copyright text-center py-3  text-light" style="  background-color:  #343a40">© 2019 Copyright:
       <p>Codemaster A-Team </p>
     </div>
     
