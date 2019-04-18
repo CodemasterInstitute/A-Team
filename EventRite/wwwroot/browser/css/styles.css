@@ -88,6 +88,8 @@ p {
 
 .event-container--image img {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .event-container--tickets > button {
