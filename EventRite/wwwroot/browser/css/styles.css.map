@@ -5,6 +5,7 @@
         "scss/styles.scss",
         "scss/_homepage.scss",
         "scss/_event.scss"
+        "scss/_headernav.scss"
         "scss/_post.scss"
     ],
     "names": [],
