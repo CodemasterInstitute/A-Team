@@ -1,6 +1,14 @@
+h1, h2, h3, .nav-item {
+  Font-Family: 'Raleway', Sans-Serif;
+}
+
+p {
+  Font-Family: 'Open Sans', Sans-Serif;
+  Font-Size: 15px;
+}
+
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -36,9 +44,8 @@
 }
 
 .event-container > * {
-  margin-left: 3%;
-  margin-right: 3%;
-  width: 94%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .event-container--image {
@@ -47,21 +54,58 @@
 
 .event-container--image img {
   width: 100%;
-  margin: 0;
 }
 
 .event-container--tickets > button {
-  width: 94%;
+  width: 50%;
 }
 
 .event-container--map {
   padding: 0px;
-  width: 100%;
 }
 
 .event-container--map iframe {
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+}
+
+.bg-dark {
+  background-color: #e0004a !important;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #031D44;
+  padding: 10px 0px;
+  margin: 0px 20px;
+  position: relative;
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f9fbfc;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.nav-link::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link:hover::before {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
