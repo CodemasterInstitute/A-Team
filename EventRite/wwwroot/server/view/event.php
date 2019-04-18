@@ -8,8 +8,7 @@
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
@@ -29,10 +28,10 @@
 
     print
     '<div class="row">
-        <div class="col-0 col-sm-2 aside-left">
+        <div class="col-0 col-md-1 col-lg-2 aside-left">
 
         </div>
-        <div class="col-12 col-sm-8 middle">
+        <div class="col-12 col-md-10 col-lg-8 middle">
             <div class="row">
                 <div class="col-12 event-container event-container--image">
                     <img alt="" src="/browser/images/events/' . $eventData["image"] . '" />
@@ -47,9 +46,9 @@
                     <button type="button" class="btn btn-primary">Tickets</button>
                     <p style="padding-top:10px; margin-bottom:0; font-size: 0.8rem; color: grey;">There are ' . $eventData["available_tickets"] . ' tickets available for this event.</p>
                 </div>
-                <div class="col-12 col-sm-6 event-container event-container--date-time">
+                <div class="col-12 col-md-6 event-container event-container--date-time">
                     <h5>Date and Time</h5>
-                    <table class="table table-sm table-borderless">
+                    <table class="table table-md table-borderless">
                         <tr>
                             <th>Start:</th>
                             <td>' . $eventData["start_date"] . '</td>
@@ -60,7 +59,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-12 col-sm-6 event-container event-container--location">
+                <div class="col-12 col-md-6 event-container event-container--location">
                     <h5>Location</h5>
                     <h6>' . $eventData["address"] . '</h6>
                 </div>
@@ -73,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-0 col-sm-2 aside-right">
+        <div class="col-0 col-md-1 col-lg-2 aside-right">
 
         </div>
     </div>';
