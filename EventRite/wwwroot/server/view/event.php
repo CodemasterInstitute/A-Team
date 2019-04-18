@@ -8,8 +8,7 @@
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
