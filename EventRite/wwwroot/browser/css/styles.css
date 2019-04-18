@@ -108,4 +108,15 @@ p {
 .nav-link:hover::before {
   width: 100%;
 }
+
+.row.contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card.contact {
+  margin: 1rem;
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */

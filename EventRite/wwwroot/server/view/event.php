@@ -2,7 +2,7 @@
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/nav.php"; 
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
 
     print
     '<div class="row">

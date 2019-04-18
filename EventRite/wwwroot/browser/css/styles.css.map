@@ -7,6 +7,7 @@
         "scss/_homepage.scss",
         "scss/_event.scss",
         "scss/_headernav.scss"
+        "scss/_post.scss"
     ],
     "names": [],
     "file": "styles.css"
