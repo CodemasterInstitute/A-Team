@@ -17,7 +17,7 @@ class CardGenerator {
       return $phrase;
    }
 
-    foreach($this->$array as $val) {
+    foreach($this->array as $val) {
       // var_dump($val);      
       ?>
         <div class="event-card col-lg-8">
