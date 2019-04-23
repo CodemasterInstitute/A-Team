@@ -5,7 +5,7 @@ class CardGenerator {
   private $array;
 
   function __construct($data) {
-    $this->$array = $data;
+    $this->array = $data;
   }
 
   function printCard() {
@@ -19,7 +19,7 @@ class CardGenerator {
       }
       return $text;
   }
-    foreach($this->$array as $val) {
+    foreach($this->array as $val) {
       ?>
       
         <div class="event-card col-lg-8">
