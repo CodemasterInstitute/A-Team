@@ -10,9 +10,8 @@ p {
   font-size: 15px;
 }
 
-.carousel-fade .carousel-inner .carousel-item {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+body {
+  background-color: #f9fbfc;
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -197,17 +196,11 @@ p {
   width: 100%;
 }
 
-.card .contact {
-  border: none;
-  text-decoration: none;
-  margin: 0;
 /*----------------Gallery-----------*/
 .container-fluid {
   padding: 50px;
 }
 
-i {
-  vertical-align: middle;
 .container-fluid h2 {
   text-align: center;
   font-size: 55px;
@@ -236,10 +229,14 @@ a.col-md-4.gallery {
   filter: grayscale(0);
 }
 
-.card.contact {
-  border: #75dbcd 1px solid;
+.card .contact {
+  border: none;
   text-decoration: none;
   margin: 0;
+}
+
+i {
+  vertical-align: middle;
 }
 
 .card.contact .card-header {
