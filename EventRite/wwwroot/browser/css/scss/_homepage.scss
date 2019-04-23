@@ -74,10 +74,12 @@
 
   .card-image {
     height: 150px;
-    width: 150px;
+    width: 200px;
 
     img {
-      max-height: 100%;
+      height: 150px;
+      width: 200px;
+      object-fit: cover;
     }
   }
 
@@ -86,10 +88,13 @@
     overflow: hidden;
 
     .card-title {
+      margin: 0;
       font-weight: bold;
+      padding: 0;
     }
 
     .card-description {
+      height: 3em;
       overflow: hidden;
     }
   }

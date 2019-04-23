@@ -99,11 +99,14 @@ body {
 
 .event-card .card-image {
   height: 150px;
-  width: 150px;
+  width: 200px;
 }
 
 .event-card .card-image img {
-  max-height: 100%;
+  height: 150px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .event-card .card-content {
@@ -112,10 +115,13 @@ body {
 }
 
 .event-card .card-content .card-title {
+  margin: 0;
   font-weight: bold;
+  padding: 0;
 }
 
 .event-card .card-content .card-description {
+  height: 3em;
   overflow: hidden;
 }
 
