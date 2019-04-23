@@ -383,8 +383,11 @@ input {
 
 #logreg-forms a {
   display: block;
-  padding-top: 10px;
-  color: lightseagreen;
+  color: white;
+}
+
+a#forgot_pswd {
+  color: black;
 }
 
 #logreg-form .lines {
@@ -463,5 +466,14 @@ input {
 
 .btn.btn-success.btn-block:hover {
   background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block {
+  background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block:hover {
+  background-color: #e0004a;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
