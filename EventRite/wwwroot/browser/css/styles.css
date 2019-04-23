@@ -198,7 +198,6 @@ body {
 
 .nav-link::before {
   -webkit-transition: 500ms;
-  -o-transition: 500ms;
   transition: 500ms;
   height: 2px;
   content: "";
@@ -304,15 +303,26 @@ input {
   width: 412px;
   margin: 10vh auto;
   background-color: #f3f3f3;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#logreg-forms.new-account {
+  width: 600px;
 }
 
 #logreg-forms form {
   width: 100%;
   max-width: 410px;
+  padding: 15px;
+  margin: auto;
+}
+
+#logreg-forms.new-account form {
+  width: 100%;
+  max-width: 550px;
   padding: 15px;
   margin: auto;
 }
@@ -331,7 +341,7 @@ input {
 }
 
 #logreg-forms .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 15px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -339,6 +349,7 @@ input {
 #logreg-forms .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin-bottom: 15px;
 }
 
 #logreg-forms .social-login {
@@ -423,5 +434,18 @@ input {
   #logreg-forms .google-btn:after {
     content: 'Google+';
   }
+}
+
+#logreg-forms.new-account input {
+  margin-bottom: 15px;
+}
+
+.btn.btn-success.btn-block {
+  background-color: #e0004a;
+  border: none;
+}
+
+.btn.btn-success.btn-block:hover {
+  background-color: #44bba4;
 }
 /*# sourceMappingURL=styles.css.map */
