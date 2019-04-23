@@ -2,6 +2,15 @@
     // Include Database Login Credentials
     include "$_SERVER[DOCUMENT_ROOT]/../config/config.php"; 
 
+    include "$_SERVER[DOCUMENT_ROOT]/server/model/EventDatabaseGenerator.php";
+
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    
+    $dbData = new EventDatabaseGenerator($conn);
+    $data= $dbData->search();
+    // $echo $data;
+
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
@@ -61,10 +70,11 @@
 <div class="container card-container">
   
 <h1>Upcoming Events</h1>
-  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
-  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
-  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
-  <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/card-list.php"; ?>
+  <?php 
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/CardGenerator.php"; 
+    $list = new CardGenerator($data);
+    $list->printCard();
+  ?>
 </div>
 <?php
 
