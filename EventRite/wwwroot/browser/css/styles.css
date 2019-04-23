@@ -91,24 +91,42 @@ body {
 
 .event-card .card-image {
   height: 150px;
-  width: 150px;
+  width: 200px;
 }
 
 .event-card .card-image img {
-  max-height: 100%;
+  height: 150px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .event-card .card-content {
   padding: 10px 20px;
-  overflow: hidden;
 }
 
 .event-card .card-content .card-title {
+  margin: 0;
   font-weight: bold;
+  padding: 0;
 }
 
 .event-card .card-content .card-description {
-  overflow: hidden;
+  margin: 5px 0;
+}
+
+.event-card .card-content .event-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.event-card .card-content .event-details p {
+  display: inline;
+  font-size: 0.8rem;
 }
 
 .event-container {
@@ -301,15 +319,26 @@ input {
   width: 412px;
   margin: 10vh auto;
   background-color: #f3f3f3;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#logreg-forms.new-account {
+  width: 600px;
 }
 
 #logreg-forms form {
   width: 100%;
   max-width: 410px;
+  padding: 15px;
+  margin: auto;
+}
+
+#logreg-forms.new-account form {
+  width: 100%;
+  max-width: 550px;
   padding: 15px;
   margin: auto;
 }
@@ -328,7 +357,7 @@ input {
 }
 
 #logreg-forms .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 15px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -336,6 +365,7 @@ input {
 #logreg-forms .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin-bottom: 15px;
 }
 
 #logreg-forms .social-login {
@@ -420,5 +450,18 @@ input {
   #logreg-forms .google-btn:after {
     content: 'Google+';
   }
+}
+
+#logreg-forms.new-account input {
+  margin-bottom: 15px;
+}
+
+.btn.btn-success.btn-block {
+  background-color: #e0004a;
+  border: none;
+}
+
+.btn.btn-success.btn-block:hover {
+  background-color: #44bba4;
 }
 /*# sourceMappingURL=styles.css.map */
