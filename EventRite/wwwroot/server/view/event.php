@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-12 col-md-6 event-container event-container--location">
                     <h5>Location</h5>
-                    <h6>' . $eventData["address"] . '</h6>
+                    <h6 id="address" value="' . $eventData["address"] . '">' . $eventData["address"] . '</h6>
                 </div>
                 <div class="col-12 event-container event-container--description">
                     <h5>Description</h5>
@@ -82,17 +82,32 @@
 
 ?>
 <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.querySelector('.event-container--map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
+    function initMap() {
+        var map = new google.maps.Map(document.querySelector('.event-container--map'), {
+          zoom: 15,
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        geocodeAddress(geocoder, map);
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').innerHTML;
+        console.log(address);
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
+</script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqXwats87-CGLD2NKvUWhqTvF7HqRbhl8&callback=initMap">
 </script>
