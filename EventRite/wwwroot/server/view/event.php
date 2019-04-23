@@ -68,7 +68,7 @@
                     <p>' . $eventData["description"] . '</p>
                 </div>
                 <div class="col-12 text-center event-container event-container--map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.4977496664796!2d115.78338305008975!3d-31.97451968112956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a44cba541e9f%3A0xd6710098215acd52!2sClaremont+Showground!5e0!3m2!1sen!2sau!4v1555477914006!5m2!1sen!2sau" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    
                 </div>
             </div>
         </div>
@@ -81,3 +81,18 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php";
 
 ?>
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.querySelector('.event-container--map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqXwats87-CGLD2NKvUWhqTvF7HqRbhl8&callback=initMap">
+</script>
