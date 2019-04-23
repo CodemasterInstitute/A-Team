@@ -11,11 +11,11 @@ class CardGenerator {
   function printCard() {
 
     foreach($this->$array as $val) {
+      // var_dump($val);
       ?>
-      
         <div class="event-card col-lg-8">
           <div class="card-image">
-          <img src="<?php echo '/browser/images/events/' . $val['image'] ?>" alt="Event Card Image" />
+          <img src="<?php echo '/browser/images/events/' . $val['image'] ?>" alt="<?php echo "Card image for: " . $val['event_name'] ?>" />
         </div>
         <div class="card-content">
           <div class="card-title"><?php echo $val["event_name"] ?></div>
