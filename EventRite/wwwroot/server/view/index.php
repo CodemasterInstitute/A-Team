@@ -7,8 +7,12 @@
     $dbData = new EventDatabaseGenerator($conn);
 
     if ($_GET) {
-      $category = $_GET["category"];
-      $data = $dbData->search($category);
+      if ($_GET["category"] == "All") {
+        $data = $dbData->search("");
+      } else {
+        $category = $_GET["category"];
+        $data = $dbData->search($category);
+      }
     } else {
       $data = $dbData->search("");
     }
@@ -45,6 +49,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <select name="category" class="form-control search-field" id="exampleFormControlSelect1">
+                              <option>All</option>
                             <?php
                                 $categories = $dbData->getCategoryList();
                                 for ($i = 0; $i < sizeOf($categories); $i++) {

@@ -40,6 +40,7 @@ class EventDatabaseGenerator {
         }
         $new = array_unique($categories);
         $second = array_values($new);
+        sort($second);
         return $second;
     }
 
