@@ -2,7 +2,7 @@
 
 class EventDatabaseGenerator {
 
-    private $array;
+    public $array;
 
     function __construct($conn) {
 
@@ -29,9 +29,18 @@ class EventDatabaseGenerator {
                     $searchArray[] = $this->array[$i];
                 }
             }
+            return $searchArray;
         }
-        
+    }
 
+    function getCategoryList() {
+        $categories;
+        for ($i = 0; $i < sizeOf($this->array); $i++) {
+            $categories[$i] = $this->array[$i]["category"];
+        }
+        $new = array_unique($categories);
+        $second = array_values($new);
+        return $second;
     }
 
 }
