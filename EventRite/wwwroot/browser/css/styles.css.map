@@ -9,6 +9,8 @@
         "scss/_post.scss",
         "scss/_headernav.scss",
         "scss/_categories.scss"
+        "scss/_headernav.scss",
+        "scss/_contact.scss"
     ],
     "names": [],
     "file": "styles.css"
