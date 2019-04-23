@@ -10,7 +10,7 @@
     
     $conn = new mysqli($servername, $username, $password, $database);
     $dbData = new EventDatabaseGenerator($conn);
-    $data = $dbData->search();
+    $data = $dbData->search("");
 
     print '<pre>';
     print_r($data);
