@@ -85,7 +85,6 @@
 
   .card-content {
     padding: 10px 20px;
-    overflow: hidden;
 
     .card-title {
       margin: 0;
@@ -94,8 +93,17 @@
     }
 
     .card-description {
-      height: 3em;
-      overflow: hidden;
+      margin: 5px 0;
+    }
+
+    .event-details {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        display: inline;
+        font-size: 0.8rem;
+      }
     }
   }
 }
