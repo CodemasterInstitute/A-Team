@@ -18,9 +18,19 @@ class EventDatabaseGenerator {
         $result->free();
     }
 
-    function search() {
+    function search($category) {
         
-        return $this->array;
+        if ($category == "") {
+            return $this->array;
+        } else {
+            for ($i = 0; $i < sizeof($this->array); $i++) {
+                $searchArray;
+                if ($this->array[$i]["category"] == $category) {
+                    $searchArray[] = $this->array[$i];
+                }
+            }
+        }
+        
 
     }
 

@@ -8,8 +8,7 @@
 
     
     $dbData = new EventDatabaseGenerator($conn);
-    $data= $dbData->search();
-    // $echo $data;
+    $data= $dbData->search("");
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
