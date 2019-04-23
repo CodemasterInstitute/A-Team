@@ -1,20 +1,11 @@
 .carousel-fade {
   .carousel-inner {
     .carousel-item {
-      transition-property: opacity;
 
       img {
         max-height: 400px;
         object-fit: cover;
       }
-    }
-
-    .carousel-item {
-      opacity: 0;
-    }
-
-    .active {
-      opacity: 1;
     }
   }
 }
