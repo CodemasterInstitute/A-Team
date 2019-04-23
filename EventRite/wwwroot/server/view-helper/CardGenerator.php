@@ -5,7 +5,7 @@ class CardGenerator {
   private $array;
 
   function __construct($data) {
-    $this->$array = $data;
+    $this->array = $data;
   }
 
   function printCard() {
