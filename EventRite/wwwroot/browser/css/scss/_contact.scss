@@ -1,6 +1,42 @@
-.card.contact{
-    border: #75dbcd 1px solid; 
+.card .contact{
+    border: none;
     text-decoration: none;
     margin: 0;
 }
-
+i {
+    vertical-align: middle;
+}
+.card.contact .card-header {
+    padding-left: 50px;
+    background-color: $secondry-color;
+}
+.card.contact .card-body {
+    padding-left: 70px;
+}
+.btn-link
+{&:hover, &:focus {
+    color: $accent-color2;
+    text-decoration: none;
+}}
+.card button{
+font-size: 30px;
+color: $accent-color3;
+}
+#socials{ 
+    button {
+        color: $primary-color;
+    }
+    .btn-outline-light{
+        border: none;
+}}
+input{
+    border-radius: 0;
+}
+.card .btn-primary{
+    background-color: $accent-color2;
+    color: white; 
+    border: none; 
+}
+.material-icons{
+    font-size: 35px;
+}

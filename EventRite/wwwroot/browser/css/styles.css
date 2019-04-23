@@ -10,8 +10,9 @@ p {
   font-size: 15px;
 }
 
-body {
-  background-color: #f9fbfc;
+.carousel-fade .carousel-inner .carousel-item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -196,11 +197,17 @@ body {
   width: 100%;
 }
 
+.card .contact {
+  border: none;
+  text-decoration: none;
+  margin: 0;
 /*----------------Gallery-----------*/
 .container-fluid {
   padding: 50px;
 }
 
+i {
+  vertical-align: middle;
 .container-fluid h2 {
   text-align: center;
   font-size: 55px;
@@ -233,6 +240,47 @@ a.col-md-4.gallery {
   border: #75dbcd 1px solid;
   text-decoration: none;
   margin: 0;
+}
+
+.card.contact .card-header {
+  padding-left: 50px;
+  background-color: #f9fbfc;
+}
+
+.card.contact .card-body {
+  padding-left: 70px;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: #44bba4;
+  text-decoration: none;
+}
+
+.card button {
+  font-size: 30px;
+  color: #75dbcd;
+}
+
+#socials button {
+  color: #000000;
+}
+
+#socials .btn-outline-light {
+  border: none;
+}
+
+input {
+  border-radius: 0;
+}
+
+.card .btn-primary {
+  background-color: #44bba4;
+  color: white;
+  border: none;
+}
+
+.material-icons {
+  font-size: 35px;
 }
 
 /* sign in FORM */
