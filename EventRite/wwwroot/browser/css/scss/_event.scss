@@ -5,7 +5,7 @@
 }
 
 
-.event-container > *{
+.event-container > * {
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -16,6 +16,8 @@
 
 .event-container--image img {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .event-container--tickets > button {
@@ -23,6 +25,9 @@
 }
 
 .event-container--map {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 500px;
     padding: 0px;
 }
 

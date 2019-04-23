@@ -1,14 +1,21 @@
-h1, h2, h3, .nav-item{
-    Font-Family: 'Raleway', Sans-Serif;
-}
-
-p{
-    Font-Family: 'Open Sans', Sans-Serif;
-Font-Size: 15px;
-}
-
 $primary-color: #000000;
 $secondry-color:#f9fbfc;
 $accent-color1:#e0004a;
 $accent-color2:#44bba4;
 $accent-color3:#75dbcd;
+
+h1,
+h2,
+h3,
+.nav-item {
+  font-family: 'Raleway', Sans-Serif;
+}
+
+p {
+  font-family: 'Open Sans', Sans-Serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: $secondry-color;
+}
