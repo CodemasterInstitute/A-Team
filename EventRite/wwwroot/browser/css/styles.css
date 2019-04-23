@@ -10,9 +10,8 @@ p {
   font-size: 15px;
 }
 
-.carousel-fade .carousel-inner .carousel-item {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+body {
+  background-color: #f9fbfc;
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -92,24 +91,42 @@ p {
 
 .event-card .card-image {
   height: 150px;
-  width: 150px;
+  width: 200px;
 }
 
 .event-card .card-image img {
-  max-height: 100%;
+  height: 150px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .event-card .card-content {
   padding: 10px 20px;
-  overflow: hidden;
 }
 
 .event-card .card-content .card-title {
+  margin: 0;
   font-weight: bold;
+  padding: 0;
 }
 
 .event-card .card-content .card-description {
-  overflow: hidden;
+  margin: 5px 0;
+}
+
+.event-card .card-content .event-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.event-card .card-content .event-details p {
+  display: inline;
+  font-size: 0.8rem;
 }
 
 .event-container {
@@ -181,6 +198,7 @@ p {
 
 .nav-link::before {
   -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   height: 2px;
   content: "";
