@@ -1,10 +1,17 @@
-h1, h2, h3, .nav-item {
-  Font-Family: 'Raleway', Sans-Serif;
+h1,
+h2,
+h3,
+.nav-item {
+  font-family: 'Raleway', Sans-Serif;
 }
 
 p {
-  Font-Family: 'Open Sans', Sans-Serif;
-  Font-Size: 15px;
+  font-family: 'Open Sans', Sans-Serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: #f9fbfc;
 }
 
 .carousel-fade .carousel-inner .carousel-item {
@@ -31,6 +38,7 @@ p {
   padding: 2rem;
   z-index: 10;
   -webkit-transform: translateY(55px);
+      -ms-transform: translateY(55px);
           transform: translateY(55px);
 }
 
@@ -66,9 +74,58 @@ p {
 @media (max-width: 992px) {
   .search-sec {
     -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
             transform: translateY(0);
-    background: #1A4668;
+    background: #f9fbfc;
   }
+}
+
+.card-container {
+  padding: 0;
+}
+
+.card-container h1 {
+  -webkit-transform: translateY(-45px);
+      -ms-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+
+.event-card {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  background-color: white;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+}
+
+.event-card:last-of-type {
+  margin-bottom: 50px;
+}
+
+.event-card .card-image {
+  height: 150px;
+  width: 150px;
+}
+
+.event-card .card-image img {
+  max-height: 100%;
+}
+
+.event-card .card-content {
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.event-card .card-content .card-title {
+  font-weight: bold;
+}
+
+.event-card .card-content .card-description {
+  overflow: hidden;
 }
 
 .event-container {
@@ -117,6 +174,7 @@ p {
 
 .jumbotron.post {
   background-image: -webkit-gradient(linear, right top, left top, from(#000000), to(#7F8C8D));
+  background-image: -o-linear-gradient(right, #000000, #7F8C8D);
   background-image: linear-gradient(-90deg, #000000, #7F8C8D);
   text-align: center;
   margin: 0 auto;
