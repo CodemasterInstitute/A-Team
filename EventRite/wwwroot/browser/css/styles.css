@@ -198,7 +198,6 @@ body {
 
 .nav-link::before {
   -webkit-transition: 500ms;
-  -o-transition: 500ms;
   transition: 500ms;
   height: 2px;
   content: "";
@@ -265,6 +264,7 @@ i {
 
 .card.contact .card-body {
   padding-left: 70px;
+  border: none;
 }
 
 .btn-link:hover, .btn-link:focus {
@@ -299,20 +299,46 @@ input {
   font-size: 35px;
 }
 
+#faqs a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#faqs {
+  margin: 0;
+}
+
+#faqs i {
+  font-size: 20px;
+  color: #44bba4;
+  -webkit-transform: rotate(-45deg);
+}
+
 /* sign in FORM */
 #logreg-forms {
   width: 412px;
   margin: 10vh auto;
   background-color: #f3f3f3;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#logreg-forms.new-account {
+  width: 600px;
 }
 
 #logreg-forms form {
   width: 100%;
   max-width: 410px;
+  padding: 15px;
+  margin: auto;
+}
+
+#logreg-forms.new-account form {
+  width: 100%;
+  max-width: 550px;
   padding: 15px;
   margin: auto;
 }
@@ -331,7 +357,7 @@ input {
 }
 
 #logreg-forms .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 15px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -339,6 +365,7 @@ input {
 #logreg-forms .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin-bottom: 15px;
 }
 
 #logreg-forms .social-login {
@@ -356,8 +383,11 @@ input {
 
 #logreg-forms a {
   display: block;
-  padding-top: 10px;
-  color: lightseagreen;
+  color: white;
+}
+
+a#forgot_pswd {
+  color: black;
 }
 
 #logreg-form .lines {
@@ -423,5 +453,27 @@ input {
   #logreg-forms .google-btn:after {
     content: 'Google+';
   }
+}
+
+#logreg-forms.new-account input {
+  margin-bottom: 15px;
+}
+
+.btn.btn-success.btn-block {
+  background-color: #e0004a;
+  border: none;
+}
+
+.btn.btn-success.btn-block:hover {
+  background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block {
+  background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block:hover {
+  background-color: #e0004a;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
