@@ -1,32 +1,12 @@
 .carousel-fade {
   .carousel-inner {
-    .item {
-      transition-property: opacity;
-    }
+    .carousel-item {
 
-    .item,
-    .active.left,
-    .active.right {
-      opacity: 0;
+      img {
+        max-height: 400px;
+        object-fit: cover;
+      }
     }
-
-    .active,
-    .next.left,
-    .prev.right {
-      opacity: 1;
-    }
-
-    .next,
-    .prev,
-    .active.left,
-    .active.right {
-      left: 0;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .carousel-control {
-    z-index: 2;
   }
 }
 
@@ -62,13 +42,68 @@
   .search-sec {
     position: relative;
     top: -114px;
-    // background: rgba(26, 70, 104, 0.51);
   }
 }
 
 @media (max-width: 992px) {
   .search-sec {
     transform: translateY(0);
-    background: #1A4668;
+    background: $secondry-color;
+  }
+}
+
+.card-container {
+  padding: 0;
+
+  h1 {
+    transform: translateY(-45px);
+  }
+}
+
+.event-card {
+  height: 150px;
+  display: flex;
+  padding: 0;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 7px -1px rgba(#000, .1);
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  .card-image {
+    height: 150px;
+    width: 200px;
+
+    img {
+      height: 150px;
+      width: 200px;
+      object-fit: cover;
+    }
+  }
+
+  .card-content {
+    padding: 10px 20px;
+
+    .card-title {
+      margin: 0;
+      font-weight: bold;
+      padding: 0;
+    }
+
+    .card-description {
+      margin: 5px 0;
+    }
+
+    .event-details {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        display: inline;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
