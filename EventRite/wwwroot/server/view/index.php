@@ -1,15 +1,18 @@
 <?php
     // Include Database Login Credentials
     include "$_SERVER[DOCUMENT_ROOT]/../config/config.php"; 
-
     include "$_SERVER[DOCUMENT_ROOT]/server/model/EventDatabaseGenerator.php";
 
     $conn = new mysqli($servername, $username, $password, $database);
-
-    
     $dbData = new EventDatabaseGenerator($conn);
-    $data= $dbData->search();
-    // $echo $data;
+    $array = $dbData->search("");
+
+    if (isset($_GET['category']) && $_GET['category'] != 'All') {
+        $category = $_GET["category"];
+        $data = $dbData->search($category);
+      } else {
+      $data = $dbData->search("");
+    }
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
@@ -31,33 +34,31 @@
 
   <div class="search-sec">
     <div class="container">
-        <form action="#" method="post" novalidate="novalidate">
+        <form action="index.php" method="get" novalidate="novalidate">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-field" placeholder="Event Name">
+                            <input type="text" name="eventName" class="form-control search-field name-search" placeholder="Event Name">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-field" placeholder="City">
+                            <input type="text" name="eventLocation" class="form-control search-field location-search" placeholder="City">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-field" id="exampleFormControlSelect1">
-                                <option>Category</option>
-                                <option>Music</option>
-                                <option>Theatre</option>
-                                <option>Family</option>
-                                <option>Comedy</option>
-                                <option>Sport</option>
-                                <option>Food & Wine</option>
-                                <option>Free</option>
-                                <option>Art</option>
-                                <option>Markets</option>
-                                <option>Other</option>
+                            <select name="category" class="form-control search-field" id="exampleFormControlSelect1">
+                              <option>All</option>
+                            <?php
+                                $categories = $dbData->getCategoryList();
+                                for ($i = 0; $i < sizeOf($categories); $i++) {
+                                    print '<option>';
+                                    print $categories[$i];
+                                    print '</option>';
+                                }
+                            ?>
                             </select>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                            <button type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +71,7 @@
 <div class="container card-container">
   
 <h1>Upcoming Events</h1>
-  <?php 
+  <?php
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/CardGenerator.php"; 
     $list = new CardGenerator($data);
     $list->printCard();
@@ -78,8 +79,9 @@
 </div>
 <?php
 
-    
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php"; 
     
 ?>
+
+<script type="text/javascript">var array=<?php echo json_encode($array); ?>;</script>
