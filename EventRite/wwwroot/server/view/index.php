@@ -5,15 +5,12 @@
 
     $conn = new mysqli($servername, $username, $password, $database);
     $dbData = new EventDatabaseGenerator($conn);
+    $array = $dbData->search("");
 
-    if ($_GET) {
-      if ($_GET["category"] == "All") {
-        $data = $dbData->search("");
-      } else {
+    if (isset($_GET['category']) && $_GET['category'] != 'All') {
         $category = $_GET["category"];
         $data = $dbData->search($category);
-      }
-    } else {
+      } else {
       $data = $dbData->search("");
     }
 
@@ -42,10 +39,10 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-field" placeholder="Event Name">
+                            <input type="text" name="eventName" class="form-control search-field name-search" placeholder="Event Name">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-field" placeholder="City">
+                            <input type="text" name="eventLocation" class="form-control search-field location-search" placeholder="City">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                             <select name="category" class="form-control search-field" id="exampleFormControlSelect1">
@@ -82,8 +79,9 @@
 </div>
 <?php
 
-    
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php"; 
     
 ?>
+
+<script type="text/javascript">var array=<?php echo json_encode($array); ?>;</script>
