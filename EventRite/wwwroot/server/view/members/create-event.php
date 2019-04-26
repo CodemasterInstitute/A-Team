@@ -64,7 +64,13 @@
         '<div class="col-12">
             <h3>Create Event</h3>
         </div>
-        <div class="col-12">
+        <div class="col-3">';
+                
+                include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/memdash.php";
+                
+        print
+        '</div>
+        <div class="col-9">
             <div class="create-event-form row">
                 <form action="members/create-event.php" method="post">
                     <div class="form-group col">
