@@ -12,8 +12,7 @@
 
       <h4 class="text-uppercase text-light">About</h4>
 
-     <p class="text-light">PLaceholder PLaceholder PLaceholder<br> PLaceholder PLaceholder PLaceholder<br> PLaceholder PLaceholder PLaceholder<br>
-     PLaceholder PLaceholderPLaceholder<br> PLaceholder PLaceholder PLaceholder<br> PLaceholder PLaceholder PLaceholder PLaceholder</p>
+     <p class="text-light">Eventrite is an exciting platform to find, attend or list events in music, art, sport, theatre, food, drink and more.  Looking for something to do? Search for events by name, category or date. Planning an event?  List it with us for free!</p>
     <div>
     <h4 class= "text-light">Log In</h4>
     <form class= "text-light">
@@ -38,19 +37,20 @@
 
             <ul class="list-unstyled text-light ">
               <li class="mt-2 pt-2">
-                <a href="#" class="text-light">Upcoming Events</a>
+                <a href="index.php" class="text-light">Upcoming Events</a>
               </li>
               <li class="mt-2 pt-2">
-                <a href="#" class="text-light">Post an Event</a>
+                <a href="index.php" class="text-light">Post an Event</a>
               </li>
               <li class="mt-2 pt-2">
                 <a href="#" class="text-light">Advertise</a>
               </li>
               <li class="mt-2 pt-2">
-                <a href="#" class="text-light">FAQs</a>
+                <a href="contact.php#FAQs" class="text-light">FAQs</a>
               </li>
               <li class="mt-2 pt-2">
-              <a href="#" class="text-light">Terms & Conditions</a>
+              
+              <a href="contact.php#tc" class="text-light">Terms & Conditions</a>
             </li>
             <li class="mt-2 pt-2">
             <a href="#" class="text-light">Read our Privacy Policy</a>
@@ -71,7 +71,7 @@
             
 
             <div class="pt-5 mt-5">
-            <h4><a href="#" class="text-light">Contact Us</a></h4>
+            <h4><a href="contact.php" class="text-light">Contact Us</a></h4>
             </div
           </div>
         
