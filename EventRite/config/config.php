@@ -6,7 +6,7 @@
     // $password = "root";
     // $database = "eventrite_local";
 
-    // Online Development
+    Online Development
     $servername = "162.144.27.218";
     $username = "benjaoa3_event";
     $password = "codemaster";
