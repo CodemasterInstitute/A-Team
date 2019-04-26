@@ -1,3 +1,4 @@
+<html>
 <?php
 
     // Include Basic Templates for <head> and <header>
@@ -5,8 +6,35 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
 
-    print
-    
+  
+    ?>
+$fName = $lName = $email = $password =  "";
+if(isset($_POST["fName"])){
+$fName=test_input($_POST["fName"])
+} else{
+    $fName = "";
+}
+
+if(isset($_POST["lName"])){
+$lName=test_input($_POST["lName"])
+} else{
+    $lName = "";
+}
+
+if(isset($_POST["email"])){
+$email=test_input($_POST["email"])
+} else{
+    $email = "";
+}
+
+if(isset($_POST["password"])){
+$password = test_input($_POST["password"])
+} else{
+    $password = "";
+}
+
+
+
    ' <div id="logreg-forms" class="new-account">
    <form class="form-signin">
        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Create Account</h1>
@@ -14,18 +42,18 @@
 
        <div class="form-row">
            <div class="col-md-6">
-             <input type="text" class="form-control" placeholder="First name">
+             <input type="text" name ="fName" class="form-control" placeholder="First name">
            </div>
            <div class="col-md-6">
-             <input type="text" class="form-control" placeholder="Last name">
+             <input type="text" name ="lName" class="form-control" placeholder="Last name">
            </div>
          </div>
         
-       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+       <input type="email" name= "email"id="inputEmail" class="form-control" placeholder="Email address" required=""
            autofocus="">
-       </row>
-       <row>
-       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+</div>
+       <div>
+       <input type="password" name ="password" id="inputPassword" class="form-control" placeholder="Password" required="">
   
        
        <p class="text-center"> Your password must be at least 8 characters</p>
@@ -62,11 +90,11 @@
    <br>
 
 </div>
-   ';
+   
 
-
+<?php
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php";
 
 ?>
-
+</html>
