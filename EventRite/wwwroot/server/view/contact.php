@@ -139,7 +139,59 @@ expand_more
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+      <p id="faqs">
+  <a data-toggle="collapse" href="#collapseTickets" aria-expanded="false" aria-controls="collapseTickets">
+    How do I book tickets? <i class="material-icons">
+close
+</i>
+  </a>
+</p>
+<div class="collapse" id="collapseTickets">
+  <div class="card card-body">
+  Bacon ipsum dolor amet frankfurter jowl andouille burgdoggen, landjaeger prosciutto ground round boudin. Picanha leberkas strip steak shankle ham. Corned beef burgdoggen shankle kielbasa porchetta pork loin meatloaf. Tenderloin shankle tongue t-bone pig flank, leberkas short loin strip steak picanha ground round hamburger.
+  </div>
+</div>
+
+<p id="faqs">
+  <a data-toggle="collapse" href="#collapseCancel" aria-expanded="false" aria-controls="collapseCancel">
+    How do I cancel an event? <i class="material-icons">
+close
+</i>
+  </a>
+</p>
+<div class="collapse" id="collapseCancel">
+  <div class="card card-body">
+  Bacon ipsum dolor amet frankfurter jowl andouille burgdoggen, landjaeger prosciutto ground round boudin. Picanha leberkas strip steak shankle ham. Corned beef burgdoggen shankle kielbasa porchetta pork loin meatloaf. Tenderloin shankle tongue t-bone pig flank, leberkas short loin strip steak picanha ground round hamburger.
+  </div>
+</div>
+
+<p id="faqs">
+  <a data-toggle="collapse" href="#collapseRefund" aria-expanded="false" aria-controls="collapseRefund">
+    Can I get a refund? <i class="material-icons">
+close
+</i>
+  </a>
+</p>
+<div class="collapse" id="collapseRefund">
+  <div class="card card-body">
+  Bacon ipsum dolor amet frankfurter jowl andouille burgdoggen, landjaeger prosciutto ground round boudin. Picanha leberkas strip steak shankle ham. Corned beef burgdoggen shankle kielbasa porchetta pork loin meatloaf. Tenderloin shankle tongue t-bone pig flank, leberkas short loin strip steak picanha ground round hamburger.
+  </div>
+</div>
+
+<p id="faqs">
+  <a data-toggle="collapse" href="#collapseBacon" aria-expanded="false" aria-controls="collapseBacon">
+    Do your venues sell bacon? <i class="material-icons">
+close
+</i>
+  </a>
+</p>
+<div class="collapse" id="collapseBacon">
+  <div class="card card-body">
+  Bacon ipsum dolor amet frankfurter jowl andouille burgdoggen, landjaeger prosciutto ground round boudin. Picanha leberkas strip steak shankle ham. Corned beef burgdoggen shankle kielbasa porchetta pork loin meatloaf. Tenderloin shankle tongue t-bone pig flank, leberkas short loin strip steak picanha ground round hamburger.
+  </div>
+</div>
+
       </div>
     </div>
   </div>

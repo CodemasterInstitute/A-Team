@@ -264,6 +264,7 @@ i {
 
 .card.contact .card-body {
   padding-left: 70px;
+  border: none;
 }
 
 .btn-link:hover, .btn-link:focus {
@@ -296,6 +297,21 @@ input {
 
 .material-icons {
   font-size: 35px;
+}
+
+#faqs a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#faqs {
+  margin: 0;
+}
+
+#faqs i {
+  font-size: 20px;
+  color: #44bba4;
+  -webkit-transform: rotate(-45deg);
 }
 
 /* sign in FORM */
@@ -367,8 +383,11 @@ input {
 
 #logreg-forms a {
   display: block;
-  padding-top: 10px;
-  color: lightseagreen;
+  color: white;
+}
+
+a#forgot_pswd {
+  color: black;
 }
 
 #logreg-form .lines {
@@ -447,5 +466,14 @@ input {
 
 .btn.btn-success.btn-block:hover {
   background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block {
+  background-color: #44bba4;
+}
+
+.btn.btn-newacct.btn-block:hover {
+  background-color: #e0004a;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

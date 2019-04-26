@@ -12,6 +12,7 @@ i {
 }
 .card.contact .card-body {
     padding-left: 70px;
+    border: none;
 }
 .btn-link
 {&:hover, &:focus {
@@ -39,4 +40,16 @@ input{
 }
 .material-icons{
     font-size: 35px;
+}
+#faqs a{
+    text-decoration: none; 
+    color: $primary-color;
+}
+#faqs{
+    margin: 0; 
+}
+#faqs i{
+    font-size: 20px; 
+    color: $accent-color2;
+    -webkit-transform: rotate(-45deg);
 }
