@@ -14,7 +14,7 @@ i {
     padding-left: 70px;
     border: none;
 }
-.btn-link
+.btn-link, button#myAccount a:link
 {&:hover, &:focus {
     color: $accent-color2;
     text-decoration: none;
@@ -33,10 +33,11 @@ color: $accent-color3;
 input{
     border-radius: 0;
 }
-.card .btn-primary{
+.card .btn-primary, button#myAccount a {
     background-color: $accent-color2;
     color: white; 
     border: none; 
+    font-size: 1rem;
 }
 .material-icons{
     font-size: 35px;

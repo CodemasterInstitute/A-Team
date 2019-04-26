@@ -267,7 +267,7 @@ i {
   border: none;
 }
 
-.btn-link:hover, .btn-link:focus {
+.btn-link:hover, .btn-link:focus, button#myAccount a:link:hover, button#myAccount a:link:focus {
   color: #44bba4;
   text-decoration: none;
 }
@@ -289,10 +289,11 @@ input {
   border-radius: 0;
 }
 
-.card .btn-primary {
+.card .btn-primary, button#myAccount a {
   background-color: #44bba4;
   color: white;
   border: none;
+  font-size: 1rem;
 }
 
 .material-icons {
