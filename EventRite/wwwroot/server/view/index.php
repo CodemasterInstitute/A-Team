@@ -6,16 +6,14 @@
     $conn = new mysqli($servername, $username, $password, $database);
     $dbData = new EventDatabaseGenerator($conn);
     $array = $dbData->search('', $conn);
+    $searchQuery = [];
 
-    if (isset($_GET['submit'])) {
-        $searchQuery = [];
-        array_push($searchQuery, $_GET['eventName'], $_GET['eventLocation'], $_GET['category']);
-        // var_dump($searchQuery);
-        $data = $dbData->search($searchQuery, $conn);
-        // var_dump($data);
-      } else {
-      $data = $array;
-    }
+    // if (isset($_GET['submit'])) {
+    //     array_push($searchQuery, $_GET['eventName'], $_GET['eventLocation'], $_GET['category']);
+    //     $data = $dbData->search($searchQuery, $conn);
+    //   } else {
+    //   $data = $array;
+    // }
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
@@ -42,13 +40,13 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" name="eventName" class="form-control search-field name-search" placeholder="Event Name">
+                            <input type="text" name="eventName" id="eventName" class="form-control search-field name-search" placeholder="Event Name">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" name="eventLocation" class="form-control search-field location-search" placeholder="City">
+                            <input type="text" name="eventLocation" id="eventLocation" class="form-control search-field location-search" placeholder="City">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select name="category" class="form-control search-field" id="exampleFormControlSelect1">
+                            <select name="category" class="form-control search-field" id="eventCategory">
                               <option>All</option>
                             <?php
                                 $categories = $dbData->getCategoryList();
@@ -61,7 +59,7 @@
                             </select>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button name="submit" type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
+                            <button id="search-btn" name="submit" type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
                         </div>
                     </div>
                 </div>
@@ -74,11 +72,12 @@
 <div class="container card-container">
   
 <h1>Upcoming Events</h1>
+<ul id="event-list">
+</ul>
   <?php
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/CardGenerator.php"; 
-    $list = new CardGenerator($data);
-    // var_dump($data);
-    $list->printCard();
+    // include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/CardGenerator.php"; 
+    // $list = new CardGenerator($data);
+    // $list->printCard();
   ?>
 </div>
 <?php
@@ -88,4 +87,7 @@
     
 ?>
 
-<script type="text/javascript">var array=<?php echo json_encode($array); ?>;</script>
+<script type="text/javascript">
+var array=<?php echo json_encode($array); ?>;
+var searchQuery=<?php echo json_encode($searchQuery); ?>
+</script>

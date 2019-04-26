@@ -45,37 +45,10 @@ class EventDatabaseGenerator {
         $stmt->bind_param('sss', $eventName, $eventLocation, $category);
         $stmt->execute();
         $res = $stmt->get_result();
-
-        // while($row = $res->fetch_assoc()) {
-        //   $searchArray[] = $row;
-        // }
   
         return $res;
 
       }
-         
-
-    //   foreach ($searchQuery as $val) {
-    //     if (!empty($val)) {
-          
-    //     }
-    // }
-
-     
-
-
-
-        // if ($category == "") {
-        //     return $this->array;
-        // } else {
-        //     for ($i = 0; $i < sizeof($this->array); $i++) {
-        //         $searchArray;
-        //         if ($this->array[$i]["category"] == $category) {
-        //             $searchArray[] = $this->array[$i];
-        //         }
-        //     }
-        //     return $searchArray;
-        // }
     }
 
     function getCategoryList() {
