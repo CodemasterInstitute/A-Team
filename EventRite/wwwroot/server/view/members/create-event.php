@@ -15,15 +15,13 @@
         <div class="col-12 col-md-10 col-lg-8 middle">
             <div class="row">
                 <div class="col-12">
-                    <h3>Details</h3>
+                    <h3>Create Event</h3>
                 </div>
                 <div class="col-12">
-                    <h5>First Name</h5>
-                    <h5>Last Name</h5>
-                    <h5>Email</h5>
-                    <h5>Address</h5>
-                    <button>Update Details</button>
-                    <button>Change Password</button>
+                    <form>
+                        <label>Event Name:</label>
+                        <input type="text" />
+                    </form>
                 </div>
             </div>
         </div>
