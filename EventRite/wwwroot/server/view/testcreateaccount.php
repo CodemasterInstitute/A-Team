@@ -10,7 +10,37 @@
 
 
 
+// Getting upcoming events
 
+
+//create connection
+
+//$conn = new mysqli($servername, $username, $password, $database);
+
+// //check connection
+
+ //if($conn->connect_error) {
+ // die("Connection Failed: " . $conn->connect_error);
+ //}
+
+// $Search_categories = "SELECT event_name, price FROM events";
+// $result = $conn->query($Search_categories);
+
+// if ($result->num_rows>0) {
+//     //output data
+//     while($row = $result->fetch_assoc()){
+//         echo "Event: " . $row["event_name"] . " " . "price: " . $row["price"]. "<br>";
+//     }} else {
+//     echo "0 results";
+
+// }
+
+// $conn->close();
+
+
+
+
+//posting to database
 
 $fName = $lName = $email = $pword = "";
 if(isset($_POST['fName'])){
@@ -67,6 +97,19 @@ if($stmt = $conn->prepare($sql)){
     echo "success";
 }
 
+// $stmt = "";
+// if(!($stmt = $conn->prepare("INSERT INTO users (fName, lName, email, pword) VALUES(?, ?, ?, ?)"))){
+//     die("Error preparing:(" .$conn->errno . ") " . $conn->error);
+// }
+
+// $fName = "Dan";
+// $lName = "awesome";
+// $email = "hello@mail.com";
+// $pword = "hello";
+
+// if(!($stmt->bind_param("ssss", $fName, $lName, $email, $pword))) {
+//     die("error in bind_param: (" .$conn->errno . ")" . $conn->error);
+// }
 
 
 
@@ -74,14 +117,18 @@ if($stmt = $conn->prepare($sql)){
  $stmt->execute();
 
 
-
+// if ($stmt->execute()){
+//     echo "hello";
+// }else{
+//     echo "goodbye";
+// }
 
 //var_dump("stmt");
 
 $stmt->close();
 $conn->close();  //close frees up resources.   Would not execute after close
 
-
+// //select, update, delete, insert
 
 
 ?>
