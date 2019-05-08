@@ -5,9 +5,8 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
 
-    print
-    
-   ' 
+   ?> 
+
    <div class="container">
    <div id="logreg-forms">
    <form class="form-signin">
@@ -20,20 +19,21 @@
        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
        
-       <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+       <button class="btn btn-success btn-block" type="submit"> Sign in</button>
        <a href="#" id="forgot_pswd">Forgot password?</a>
        <hr>
        
 
-       <button class="btn btn-newacct btn-block" type="button" id="btn-signup"></i> <a href="createaccount.php"> Create Account</button>
+       <button class="btn btn-newacct btn-block" type="button" id="btn-signup"> <a href="createaccount.php">Create Account</button>
     
        </form>
 
        <br>
        
 </div>
-</div>';
+</div>
 
+<?php
 
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php";
