@@ -15,11 +15,11 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="categories.php">Categories</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Advertise</a>
-              </li>
-              <li class="nav-item">
+            </li>';
+            // <li class="nav-item">
+            //     <a class="nav-link" href="#">Advertise</a>
+            //   </li>
+              print '<li class="nav-item">
                   <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
