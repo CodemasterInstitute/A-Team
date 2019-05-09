@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid search-container">
           <h2> EVENT CATEGORIES</h2>
       
           <br>
