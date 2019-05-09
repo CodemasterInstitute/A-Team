@@ -12,12 +12,12 @@
       $this->view('pages/index', $data);
     }
 
-    public function about(){
+    public function contact(){
       $data = [
-        'title' => 'About Us'
+        'title' => 'Contact'
       ];
 
-      $this->view('pages/about', $data);
+      $this->view('pages/contact', $data);
     }
 
     public function dashboard(){
