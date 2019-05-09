@@ -22,12 +22,12 @@ class CardGenerator {
       ?>
         <div class="event-card col-lg-8">
           <div class="card-image">
-          <img src="<?php echo '/browser/images/events/' . $val['image'] ?>" alt="<?php echo "Card image for: " . $val['event_name'] ?>" />
+          <img src="<?php echo '/browser/images/events/' . $val['event_image'] ?>" alt="<?php echo "Card image for: " . $val['event_name'] ?>" />
         </div>
         <div class="card-content">
           <div class="card-title"><?php echo $val["event_name"] ?></div>
           <div class="card-description">
-            <?php echo truncate_phrase($val["description"], 30);?> <a href="/event.php?id=<?php echo $val["id"]?>">Find out more</a>
+            <?php echo truncate_phrase($val["description"], 30);?> <a href="/event.php?event_id=<?php echo $val["event_id"]?>">Find out more</a>
           </div>
           <div class="event-details">
             <p><?php echo date('jS M Y', strtotime($val["start_date"]))?></p>
