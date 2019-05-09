@@ -25,7 +25,7 @@
             <a class="nav-link text-light" href="#" >Advertise your event</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >My Account login</a>
+            <a class="nav-link text-light" href="#" >My Account log in</a>
             </li>
             <li>
             <a class="nav-link text-light" href="#" >FAQs</a>

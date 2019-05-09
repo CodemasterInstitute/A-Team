@@ -267,14 +267,22 @@ i {
   border: none;
 }
 
+#collapseTwo {
+  text-align: center;
+}
+
+.card.contact h2 {
+  text-align: center;
+}
+
 .btn-link:hover, .btn-link:focus, button#myAccount a:link:hover, button#myAccount a:link:focus {
-  color: #44bba4;
+  color: #75dbcd;
   text-decoration: none;
 }
 
 .card button {
   font-size: 30px;
-  color: #75dbcd;
+  color: #000000;
 }
 
 #socials button {
