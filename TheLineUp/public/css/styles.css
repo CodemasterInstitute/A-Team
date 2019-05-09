@@ -266,10 +266,15 @@ i {
 .card.contact .card-body {
   padding-left: 70px;
   border: none;
+  text-align: center;
 }
 
-#collapseTwo {
-  text-align: center;
+.col-md-6.col-md-offset-3#contact {
+  margin: 0 auto;
+}
+
+.form-group .col-md-12#contact-submit {
+  text-align: left;
 }
 
 .card.contact h2 {
@@ -279,6 +284,11 @@ i {
 .btn-link:hover, .btn-link:focus, button#myAccount a:link:hover, button#myAccount a:link:focus {
   color: #75dbcd;
   text-decoration: none;
+}
+
+.btn.btn-outline-light:hover {
+  background-color: #44bba4;
+  opacity: 0.3;
 }
 
 .card button {
@@ -485,6 +495,10 @@ a#forgot_pswd {
 .btn.btn-newacct.btn-block:hover {
   background-color: #e0004a;
   text-decoration: none;
+}
+
+.card.card-body.bg-light.mt-5 {
+  margin-bottom: 3rem !important;
 }
 
 footer {
