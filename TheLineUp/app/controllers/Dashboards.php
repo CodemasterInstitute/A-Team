@@ -1,7 +1,7 @@
 <?php
   class Dashboards extends Controller {
     public function __construct(){
-     
+
     }
     
     public function index(){
@@ -13,8 +13,11 @@
     }
 
     public function details(){
+
+      $user = $_SESSION['user'];
+
       $data = [
-        'title' => 'Account Details'
+        'user' => $user
       ];
 
       $this->view('dashboard/details', $data);
