@@ -4,8 +4,9 @@
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php";
 
-    print
-    '<div class="row">
+?>
+    
+    <div class="row">
         <div class="col-0 col-md-1 col-lg-2 aside-left">
 
         
@@ -18,13 +19,21 @@
                 <div class="col-12">
                     <h3>Details</h3>
                 </div>
-                <div class="col-3">';
+                <div class="col-3">
                 
-                include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/memdash.php";
+                <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/memdash.php"; ?>
                 
-                print
-                '</div>
+                </div>
                 <div class="col-9">
+
+                <!-- If type = edit display this -->
+
+                
+
+                <!-- else if type = delete display this -->
+
+                <!-- else display normal type -->
+
                     <h5>First Name</h5>
                     <h5>Last Name</h5>
                     <h5>Email</h5>
@@ -37,7 +46,9 @@
         <div class="col-0 col-md-1 col-lg-2 aside-right">
 
         </div>
-    </div>';
+    </div>
+
+<?php
 
     // Include Basic Templates for <footer>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/footer.php"; 
