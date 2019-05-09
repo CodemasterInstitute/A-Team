@@ -332,7 +332,6 @@ input {
   font-size: 20px;
   color: #44bba4;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 /* sign in FORM */
@@ -550,6 +549,10 @@ footer .nav-link {
 }
 
 .dashboard-form-input {
+  width: 100%;
+}
+
+.dashboard-form-textarea {
   width: 100%;
 }
 
