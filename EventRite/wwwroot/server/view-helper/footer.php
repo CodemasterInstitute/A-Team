@@ -10,7 +10,9 @@
 
         <div class="col-sm-4 footer-left">
           <h4>About</h4>
-          <p>Eventrite is an exciting platform to find, attend or list events in music, art, sport, theatre, food, drink and more.  Looking for something to do? Search for events by name, category or date. Planning an event?  List it with us for free!</p>
+          <p>Eventrite is an exciting platform to find, attend or list events in music, art, sport, theatre, family, food and more.</p>
+          <p>Looking for something to do? Search for events by name, category or date.</p>
+          <p>Planning an event?  List it with us for free!</p>
         </div>
 
       
@@ -18,22 +20,18 @@
           <h4>Events</h4>
           <ul class="list-unstyled text-light">
             <li>
-            <a class="nav-link text-light" href="#" >Upcoming Events</a>
+            <a class="nav-link text-light" href="#" >Categories</a>
+            </li>
+            <a class="nav-link text-light" href="#" >Advertise your event</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >Post an Event</a>
-            </li>
-            <li>
-            <a class="nav-link text-light" href="#" >Advertise</a>
+            <a class="nav-link text-light" href="#" >My Account login</a>
             </li>
             <li>
             <a class="nav-link text-light" href="#" >FAQs</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >Terms & Conditions</a>
-            </li>
-            <li>
-            <a class="nav-link text-light" href="#" >Read our Privacy Policy</a>
+            <a class="nav-link text-light" href="#" >T&Cs</a>
             </li>
           </ul>
       </div>
@@ -48,7 +46,7 @@
 </ul>
         </div>
         <div class="row copyright">
-        <p>© 2019 Codemaster A-Team. Any similiarities to Eventbrite are definitely coincidental. Although, should you have further concerns, lecturer Dan is always available for questioning.</p>  
+        <p>© 2019 Codemaster Institute A-Team | The Line Up</p>  
         </div>
     </div>
 </div>
