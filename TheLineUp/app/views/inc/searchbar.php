@@ -18,7 +18,7 @@
               </select>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <button name="submit" type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
+              <button name="submit" type="submit" value="submit" class="btn btn-danger wrn-btn search-btn">Search</button>
             </div>
           </div>
         </div>

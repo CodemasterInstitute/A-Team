@@ -1,7 +1,7 @@
 <?php
   class Dashboards extends Controller {
     public function __construct(){
-     
+      $this->dashboardModel = $this->model('Dashboard');
     }
     
     public function index(){
@@ -13,8 +13,28 @@
     }
 
     public function details(){
+
+      $user = $_SESSION['user'];
+
+      if (isset($_POST['first_name'])){
+
+        $updateData = [
+          'user_id' => $_SESSION['user']->user_id,
+          'first_name' => $_POST['first_name'],
+          'last_name' => $_POST['last_name'],
+          'email' => $_POST['email'],
+          'password' => $_POST['password'],
+          'phone_number' => $_POST['phone_number']
+        ];
+
+        $user = $this->dashboardModel->update($updateData);
+
+        $_SESSION['user'] = $user;
+
+      }
+
       $data = [
-        'title' => 'Account Details'
+        'user' => $user
       ];
 
       $this->view('dashboard/details', $data);
