@@ -19,7 +19,7 @@
     };
 
     // GET eventID
-    $eventID = $_GET["id"];
+    $eventID = $_GET["event_id"];
 
     // Create a new EventDataGenerator object and get event data
     $eventDataGenerator = new EventDataGenerator();

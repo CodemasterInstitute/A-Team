@@ -4,10 +4,15 @@
 
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php"; 
-    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/post.php";
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php";
 
 ?>
+
+<div class="jumbotron jumbotron-fluid post">
+  <div class="container">
+    <h1 class="display-4">The Low Down</h1>
+  </div>
+  </div>
 
 <!-- Anchor cards to click down to the section you want info about -->
 
@@ -15,7 +20,7 @@
   <div class="card contact">
     <div class="card-header">
       <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           Contact <i class="material-icons">
 expand_more
 </i> 
@@ -23,10 +28,10 @@ expand_more
       </h2>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugiat assumenda atque neque sapiente veritatis, possimus nobis ipsa molestiae eos natus beatae sint consectetur! Animi deleniti excepturi sed dicta itaque rerum possimus harum eaque quia, vero distinctio maiores sit nemo nam a sint voluptas. Inventore, nostrum. Nesciunt dolorem laboriosam tenetur, aliquid illo esse libero dignissimos ex blanditiis consequatur ipsa dolor nisi odio quod, at enim officiis quae eligendi necessitatibus? Maxime libero enim porro amet, alias eveniet tempora aspernatur aliquid perspiciatis eaque nostrum quaerat facilis molestias voluptatibus eligendi fugiat.</p>
-        
+
     <!-- contact form -->
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
@@ -70,6 +75,8 @@ expand_more
 <!----contact form ends here---->
       </div>
     </div>
+
+
   </div>
 
   <div class="card contact">
@@ -122,7 +129,8 @@ expand_more
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+      <button class="btn btn-primary btn-sm" id="myAccount"><a href="\server\view\login.php">Login to My Account</a></button>
       </div>
     </div>
   </div>

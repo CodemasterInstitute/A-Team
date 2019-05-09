@@ -5,13 +5,16 @@
 
     $conn = new mysqli($servername, $username, $password, $database);
     $dbData = new EventDatabaseGenerator($conn);
-    $array = $dbData->search("");
+    $array = $dbData->search('', $conn);
 
-    if (isset($_GET['category']) && $_GET['category'] != 'All') {
-        $category = $_GET["category"];
-        $data = $dbData->search($category);
+    if (isset($_GET['submit'])) {
+        $searchQuery = [];
+        array_push($searchQuery, $_GET['eventName'], $_GET['eventLocation'], $_GET['category']);
+        // var_dump($searchQuery);
+        $data = $dbData->search($searchQuery, $conn);
+        // var_dump($data);
       } else {
-      $data = $dbData->search("");
+      $data = $array;
     }
 
     // Include Basic Templates for <head> and <header>
@@ -58,7 +61,7 @@
                             </select>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
+                            <button name="submit" type="submit" value="submit" class="btn btn-danger wrn-btn">Search</button>
                         </div>
                     </div>
                 </div>
@@ -74,6 +77,7 @@
   <?php
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/CardGenerator.php"; 
     $list = new CardGenerator($data);
+    // var_dump($data);
     $list->printCard();
   ?>
 </div>
