@@ -8,7 +8,7 @@
 
         function getData ($conn, $eventID) {
 
-            $sql = "SELECT * FROM events WHERE id = '$eventID'";
+            $sql = "SELECT * FROM events WHERE event_id = '$eventID'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
