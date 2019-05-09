@@ -19,12 +19,4 @@
 
       $this->view('pages/contact', $data);
     }
-
-    public function dashboard(){
-
-      $data = [
-        'title' => 'User Dashboard'
-      ];
-      $this->view('pages/dashboard', $data);
-    }
   }

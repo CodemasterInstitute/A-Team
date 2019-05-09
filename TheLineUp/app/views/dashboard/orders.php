@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php include APPROOT . '/views/inc/memdash.php'; ?>
 
 <div class="col-9">
 

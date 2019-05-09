@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php include APPROOT . '/views/inc/memdash.php'; ?>
 
     <div class="col-9">
     <?php if (isset($_GET['type']) && $_GET['type'] == 'edit'): ?>
