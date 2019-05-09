@@ -32,6 +32,16 @@
       $this->db->bind(':user_id', $data['user_id']);
       return $this->db->single();
     }
+
+    public function delete($userID){
+      $this->db->query(
+        'DELETE FROM users
+        WHERE user_id = :user_id'
+      );
+      $this->db->bind('user_id', $userID);
+      $this->db->execute();
+    }
+
   }
 
 ?>
