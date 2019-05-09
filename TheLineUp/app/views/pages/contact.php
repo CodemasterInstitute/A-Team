@@ -21,19 +21,27 @@ expand_more
 
     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugiat assumenda atque neque sapiente veritatis, possimus nobis ipsa molestiae eos natus beatae sint consectetur! Animi deleniti excepturi sed dicta itaque rerum possimus harum eaque quia, vero distinctio maiores sit nemo nam a sint voluptas. Inventore, nostrum. Nesciunt dolorem laboriosam tenetur, aliquid illo esse libero dignissimos ex blanditiis consequatur ipsa dolor nisi odio quod, at enim officiis quae eligendi necessitatibus? Maxime libero enim porro amet, alias eveniet tempora aspernatur aliquid perspiciatis eaque nostrum quaerat facilis molestias voluptatibus eligendi fugiat.</p>
+        <p>The Line Up team is always happy to receive feedback — complimentary or constructive. If you have a question, we recommend you check out our FAQs (below) first for a much quicker response on general queries. But, if you can't find what you're looking for, then please drop us an email and a friendly member from our Line Up Care Centre will respond within 48 hours.</p>
 
     <!-- contact form -->
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3" id="contact" >
         <div class="well well-sm">
           <form class="form-horizontal" action="" method="post">
           <fieldset>
     
-            <!-- Name input-->
+            <!-- First Name input-->
             <div class="form-group">
-              <label class="col-md-3 control-label" for="name"></label>
+              <label class="col-md-3 control-label" for="fname"></label>
               <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Provide your full name" class="form-control">
+                <input id="fname" name="fname" type="text" placeholder="First name" class="form-control" required>
+              </div>
+            </div>
+
+             <!-- Last Name input-->
+             <div class="form-group">
+              <label class="col-md-3 control-label" for="lname"></label>
+              <div class="col-md-9">
+                <input id="lname" name="lname" type="text" placeholder="Last name" class="form-control" required>
               </div>
             </div>
     
@@ -41,7 +49,7 @@ expand_more
             <div class="form-group">
               <label class="col-md-3 control-label" for="email"></label>
               <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Enter your email address" class="form-control">
+                <input id="email" name="email" type="text" placeholder="Your email address" class="form-control" required>
               </div>
             </div>
     
@@ -49,14 +57,14 @@ expand_more
             <div class="form-group">
               <label class="col-md-3 control-label" for="message"></label>
               <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message" rows="5"></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="What can we help you with?" rows="5" required></textarea>
               </div>
             </div>
     
             <!-- Form actions -->
             <div class="form-group">
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+              <div class="col-md-12" id="contact-submit">
+                <button type="submit" class="btn btn-primary btn-sm">Send to The Line Up Care team</button>
               </div>
             </div>
           </fieldset>
@@ -82,8 +90,8 @@ expand_more
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body" id="socials">
-      <button type="button" class="btn btn-outline-light">#eventrite</button>
-      <button type="button" class="btn btn-outline-light">#theritestuff</button>
+      <button type="button" class="btn btn-outline-light">#thelineup</button>
+      <button type="button" class="btn btn-outline-light">#lineupevents</button>
       <button type="button" class="btn btn-outline-light"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
       <button type="button" class="btn btn-outline-light"><i class="fab fa-twitter pr-1"></i> Twitter</button>
       <button type="button" class="btn btn-outline-light"><i class="fab fa-instagram pr-1"></i> Instagram</button>
@@ -103,7 +111,36 @@ expand_more
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+      <!-- Advertising tiers -->
+      <div class="card-group">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Peasant package</h5>
+      <p class="card-text">While you may not be able to enter the Royal arena, just yet, we will make sure your event is given a decent plug among the locals.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- advertising ends -->
       </div>
     </div>
   </div>
@@ -121,7 +158,7 @@ expand_more
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div class="card-body">
         <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-      <button class="btn btn-primary btn-sm" id="myAccount"><a href="\server\view\login.php">Login to My Account</a></button>
+      <button class="btn btn-primary btn-sm" id="myAccount"><a href="<?php echo URLROOT; ?>/users/login">Login to My Account</a></button>
       </div>
     </div>
   </div>
@@ -129,7 +166,7 @@ expand_more
   <div class="card contact">
     <div class="card-header">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
           FAQs <i class="material-icons">
 expand_more
 </i>
@@ -141,7 +178,7 @@ expand_more
 
       <p id="faqs">
   <a data-toggle="collapse" href="#collapseTickets" aria-expanded="false" aria-controls="collapseTickets">
-    How do I book tickets? <i class="material-icons">
+How do I book tickets? <i class="material-icons">
 close
 </i>
   </a>
