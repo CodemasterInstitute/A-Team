@@ -16,7 +16,7 @@
 
       $user = $_SESSION['user'];
 
-      if (isset($_POST['first_name'])){
+      if (isset($_POST['type']) && $_POST['type'] == 'edit'){
 
         $updateData = [
           'user_id' => $_SESSION['user']->user_id,
@@ -30,6 +30,21 @@
         $user = $this->dashboardModel->update($updateData);
 
         $_SESSION['user'] = $user;
+
+      } else if (isset($_POST['type']) && $_POST['type'] == 'delete') {
+
+        if ($_POST['delete-check'] == 'DELETE'){
+          $this->dashboardModel->delete($_SESSION['user']->user_id);
+
+          unset($_SESSION['user']);
+          redirect('/');
+        } else {
+          
+          $errors = "You did not spell DELETE correctly";
+          $data['errors'] = $errors;
+          redirect('dashboards/details?type=delete');
+          
+        }
 
       }
 
