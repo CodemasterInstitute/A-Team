@@ -268,14 +268,22 @@ i {
   border: none;
 }
 
-.btn-link:hover, .btn-link:focus {
-  color: #44bba4;
+#collapseTwo {
+  text-align: center;
+}
+
+.card.contact h2 {
+  text-align: center;
+}
+
+.btn-link:hover, .btn-link:focus, button#myAccount a:link:hover, button#myAccount a:link:focus {
+  color: #75dbcd;
   text-decoration: none;
 }
 
 .card button {
   font-size: 30px;
-  color: #75dbcd;
+  color: #000000;
 }
 
 #socials button {
@@ -290,10 +298,11 @@ input {
   border-radius: 0;
 }
 
-.card .btn-primary {
+.card .btn-primary, button#myAccount a {
   background-color: #44bba4;
   color: white;
   border: none;
+  font-size: 1rem;
 }
 
 .material-icons {
@@ -481,7 +490,6 @@ a#forgot_pswd {
 
 footer {
   background-color: #343a40;
-  min-height: 360px;
 }
 
 footer h4 {
