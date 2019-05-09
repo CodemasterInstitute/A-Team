@@ -22,7 +22,7 @@ class CardGenerator {
       ?>
         <div class="event-card col-lg-8">
           <div class="card-image">
-          <img src="<?php echo '/browser/images/events/' . $val['image'] ?>" alt="<?php echo "Card image for: " . $val['event_name'] ?>" />
+          <img src="<?php echo '/browser/images/events/' . $val['event_image'] ?>" alt="<?php echo "Card image for: " . $val['event_name'] ?>" />
         </div>
         <div class="card-content">
           <div class="card-title"><?php echo $val["event_name"] ?></div>
