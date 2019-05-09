@@ -179,6 +179,6 @@
       $_SESSION['user'] = $user;
       // $_SESSION['user_name'] = $user->first_name;
       // $_SESSION['user_email'] = $user->email;
-      redirect('pages/dashboard');
+      redirect('dashboards');
     }
   }
