@@ -10,17 +10,17 @@
                     <!-- If type = edit display this -->
                     <!-- Add form with all palceholders filled -->
                     <h3>Edit Account Details</h3>
-                    <form class="dashboard-form" method="post" action="dashboard/details.php">
+                    <form class="dashboard-form" method="post" action="details">
                         <label>First Name</label>
-                        <input class="dashboard-form-input" type="text" name="first_name" placeholder="<?php echo $data['user']->first_name; ?>" />
+                        <input class="dashboard-form-input" type="text" name="first_name" value="<?php echo $data['user']->first_name; ?>" />
                         <label>Last Name</label>
-                        <input class="dashboard-form-input" type="text" name="last_name" placeholder="<?php echo $data['user']->last_name; ?>" />
+                        <input class="dashboard-form-input" type="text" name="last_name" value="<?php echo $data['user']->last_name; ?>" />
                         <label>Email</label>
-                        <input class="dashboard-form-input" type="text" name="email" placeholder="<?php echo $data['user']->email; ?>" />
+                        <input class="dashboard-form-input" type="text" name="email" value="<?php echo $data['user']->email; ?>" />
                         <label>Password</label>
-                        <input class="dashboard-form-input" type="text" name="password" placeholder="<?php echo $data['user']->password; ?>" />
+                        <input class="dashboard-form-input" type="text" name="password" value="<?php echo $data['user']->password; ?>" />
                         <label>Phone Number</label>
-                        <input class="dashboard-form-input" type="text" name="phone_number" placeholder="<?php echo $data['user']->phone_number; ?>" />
+                        <input class="dashboard-form-input" type="text" name="phone_number" value="<?php echo $data['user']->phone_number; ?>" />
                         <button class="dashboard-form-button" type="submit">Update</button>
                     </form>
 
@@ -55,7 +55,7 @@
                         <a class="dashboard-link" href="details?type=delete">Delete</a>
                     </div>
                     <pre>
-                    <?php echo print_r($data); ?>
+                    <?php echo print_r($_SESSION['user']); ?>
                     </pre>
                     </div>
                     
