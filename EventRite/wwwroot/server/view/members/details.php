@@ -3,57 +3,64 @@
     // Include Basic Templates for <head> and <header>
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/head.php"; 
     include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/navigation.php";
-
-?>
-    
-    <div class="row">
-        <div class="col-0 col-md-1 col-lg-2 aside-left">
-
-        
-    
-    
-
-    </div>
-        <div class="col-12 col-md-10 col-lg-8 middle">
-            <div class="row">
-                <div class="col-12">
-                    <h3>Details</h3>
-                </div>
-                <div class="col-3">
+    include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/memdash.php"; ?>
                 
-                <?php include "$_SERVER[DOCUMENT_ROOT]/server/view-helper/memdash.php"; ?>
                 
-                </div>
                 <div class="col-9">
+                
 
-                <?php $userID = $_SESSION['user_id']; ?>
-
-                <?php if (isset($_GET['type']) && $_GET['type'] = 'edit') : ?>
+                <?php if (isset($_GET['type']) && $_GET['type'] == 'edit'): ?>
 
                     <!-- If type = edit display this -->
                     <!-- Add form with all palceholders filled -->
+                    <h3>Edit Account Details</h3>
+                    <form class="members-form" method="post" action="members/details.php">
+                        <label>First Name</label>
+                        <input class="members-form-input" type="text" name="first_name" />
+                        <label>Last Name</label>
+                        <input class="members-form-input" type="text" name="last_name" />
+                        <label>Email</label>
+                        <input class="members-form-input" type="text" name="email" />
+                        <label>Password</label>
+                        <input class="members-form-input" type="text" name="password" />
+                        <label>Phone Number</label>
+                        <input class="members-form-input" type="text" name="phone_number" />
+                        <button class="members-form-button" type="submit">Update</button>
+                    </form>
 
-                <?php elseif (isset($_GET['type']) && $_GET['type'] = 'delete') : ?>
+                <?php elseif (isset($_GET['type']) && $_GET['type'] == 'delete'): ?>
 
                     <!-- else if type = delete display this 
                                 create form that allows deleting user-->
 
-                <?php else : ?>
+                    <h3>Delete Your Account</h3>
+                    <p> If you are sure you want to DELETE your account please enter your password below and select 'Delete'.</p>
+                    <form class="members-form" method="post" action="members/details.php">
+                        <input class="members-form-input" type="text" name="delete-check" />
+                        <button class="members-form-button" type="submit">Delete</button>
+                    </form>
+
+
+                <?php else: ?>
 
                     <!-- else display normal type -->
 
-                
+                    <h3>Your Account Details</h3>
 
-                    <h5>First Name: </h5>
-                    <h5>Last Name</h5>
-                    <h5>Email</h5>
-                    <h5>Address</h5>
-                    <button>Update Details</button>
-                    <button>Change Password</button>
-                    <form action="details.php" method="get" >
-                    <button type="submit" name="type" value="edit"></button>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Email</p>
+                    <p>Password</p>
+                    <p>Phone Number</p>
 
-                    </form>
+                    <div class="row members-link-container">
+                        <div class="col-12">
+                        <a class="members-link" href="members/details.php?type=edit">Edit</a>
+                        <a class="members-link" href="members/details.php?type=delete">Delete</a>
+                    </div>
+                    </div>
+                        
+
 
 
                 <?php endif; ?>
