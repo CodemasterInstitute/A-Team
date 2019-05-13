@@ -26,9 +26,6 @@
     margin: auto;
 }
 
-
-
-
 #logreg-forms .form-control {
     position: relative;
     box-sizing: border-box;
@@ -148,4 +145,10 @@ a#forgot_pswd{
 .btn.btn-newacct.btn-block:hover {
     background-color: $accent-color1;
     text-decoration: none;
+}
+
+// Registration page
+
+.card.card-body.bg-light.mt-5 {
+    margin-bottom: 3rem !important;
 }

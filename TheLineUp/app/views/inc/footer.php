@@ -4,7 +4,7 @@
 
         <div class="col-sm-4 footer-left">
           <h4>About</h4>
-          <p>Eventrite is an exciting platform to find, attend or list events in music, art, sport, theatre, family, food and more.</p>
+          <p>The Line Up is an exciting platform to find, attend or list events in music, art, sport, theatre, family, food and more.</p>
           <p>Looking for something to do? Search for events by name, category or date.</p>
           <p>Planning an event?  List it with us for free!</p>
         </div>
