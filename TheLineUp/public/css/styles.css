@@ -322,7 +322,6 @@ input {
   font-size: 20px;
   color: #44bba4;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 /* sign in FORM */
