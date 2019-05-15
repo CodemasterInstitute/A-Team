@@ -274,7 +274,11 @@ i {
 }
 
 .form-group .col-md-12#contact-submit {
-  text-align: left;
+  text-align: center;
+}
+
+#contact .col-md-9 {
+  margin: 0 auto;
 }
 
 .card.contact h2 {
