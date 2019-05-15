@@ -1,15 +1,17 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
-<div class="container notfoundpage">
+<div class="container">
 
-<div class="row">
-<div class="col">
-    <h1 class ="notfound">OOPS!</h1>
-    <h2 class="notfound"> Something went wrong</h2>
-        <a href='/pages/index.php'>Take me back</a>
-        </div>
+
+    <div class="d-flex flex-column justify-content-center align-items-center oopsbox">
+      <h1 data-shadow='oops!'>oops!</h1>
+        <h2 class="text-center notfound"> Something went wrong</h2>
+        <div class="Button" align="center">  <a class="text-center" href='/pages/index.php'>Take me back</a></div>
+        
+    </div>
+
 </div>
-</div>
+
 
   
 
