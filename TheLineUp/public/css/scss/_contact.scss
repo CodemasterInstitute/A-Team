@@ -1,0 +1,75 @@
+.card .contact{
+    border: none;
+    text-decoration: none;
+    margin: 0;
+}
+i {
+    vertical-align: middle;
+}
+.card.contact .card-header {
+    padding-left: 50px;
+    background-color: $secondry-color;
+}
+.card.contact .card-body {
+    padding-left: 70px;
+    border: none;
+    text-align: center;
+}
+.col-md-6.col-md-offset-3#contact {
+margin: 0 auto;
+}
+.form-group .col-md-12#contact-submit {
+    text-align: center; 
+}
+#contact .col-md-9 {
+    margin: 0 auto; 
+}
+
+.card.contact h2 {
+    text-align: center;
+}
+.btn-link, button#myAccount a:link
+{&:hover, &:focus {
+    color: $accent-color3;
+    text-decoration: none;
+}}
+
+.btn.btn-outline-light:hover {
+    background-color: $accent-color2;
+    opacity: 0.3; 
+}
+.card button{
+font-size: 30px;
+color: $primary-color;
+}
+#socials{ 
+    button {
+        color: $primary-color;
+    }
+    .btn-outline-light{
+        border: none;
+}}
+input{
+    border-radius: 0;
+}
+.card .btn-primary, button#myAccount a {
+    background-color: $accent-color2;
+    color: white; 
+    border: none; 
+    font-size: 1rem;
+}
+.material-icons{
+    font-size: 35px;
+}
+#faqs a{
+    text-decoration: none; 
+    color: $primary-color;
+}
+#faqs{
+    margin: 0; 
+}
+#faqs i{
+    font-size: 20px; 
+    color: $accent-color2;
+    -webkit-transform: rotate(-45deg);
+}
