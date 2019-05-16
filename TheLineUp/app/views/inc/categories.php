@@ -1,7 +1,7 @@
-<div class="container-fluid search-container">
-          <h2> EVENT CATEGORIES</h2>
+<div class="container search-container">
+          <!-- <h2> EVENT CATEGORIES</h2>
       
-          <br>
+          <br> -->
       <div class="container gallery">
           
           <div class="row">
