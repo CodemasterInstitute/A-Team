@@ -298,6 +298,7 @@ a.col-md-4.gallery {
 .container.gallery {
   width: 75%;
   padding-top: 0;
+  padding-bottom: 100px;
 }
 
 .img-fluid.galleryimage {
@@ -331,10 +332,19 @@ i {
 .card.contact .card-body {
   padding-left: 70px;
   border: none;
+  text-align: center;
 }
 
-#collapseTwo {
+.col-md-6.col-md-offset-3#contact {
+  margin: 0 auto;
+}
+
+.form-group .col-md-12#contact-submit {
   text-align: center;
+}
+
+#contact .col-md-9 {
+  margin: 0 auto;
 }
 
 .card.contact h2 {
@@ -344,6 +354,11 @@ i {
 .btn-link:hover, .btn-link:focus, button#myAccount a:link:hover, button#myAccount a:link:focus {
   color: #75dbcd;
   text-decoration: none;
+}
+
+.btn.btn-outline-light:hover {
+  background-color: #44bba4;
+  opacity: 0.3;
 }
 
 .card button {
@@ -553,6 +568,10 @@ a#forgot_pswd {
   text-decoration: none;
 }
 
+.card.card-body.bg-light.mt-5 {
+  margin-bottom: 3rem !important;
+}
+
 footer {
   background-color: #343a40;
 }
@@ -604,6 +623,10 @@ footer .nav-link {
   width: 100%;
 }
 
+.dashboard-form-textarea {
+  width: 100%;
+}
+
 .dashboard-form-button {
   color: black;
   margin: 10px 15px 10px 0;
@@ -632,5 +655,116 @@ footer .nav-link {
 
 .dashboard-link-container div {
   padding: 0;
+}
+
+.oopsbox {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+img.oopsbox {
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.button a {
+  color: #e0004a;
+  font-size: 15px;
 }
 /*# sourceMappingURL=styles.css.map */
