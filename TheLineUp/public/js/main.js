@@ -1,6 +1,15 @@
 let searchContainer = document.querySelector('.search-container');
 let searchBtn = document.querySelector('.search-btn');
 let searchQuery = [];
+let categoryGridList = document.querySelectorAll('a.gallery');
+
+categoryGridList.forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchQuery.category = el.dataset.categoryId;
+    searchResults('search');
+  })
+});
 
 let categoryList = () => {
   fetch(`http://localhost:8888/events/categories`, {
@@ -78,6 +87,8 @@ searchBtn.addEventListener('click', (e) => {
     searchResults('search');
   }
 })
+
+
 
 categoryList();
 
