@@ -32,4 +32,13 @@
 
       $this->view('pages/contact', $data);
     }
+
+    public function notfound(){
+      $data = [
+        'title' => 'NotFound'
+      ];
+
+      $this->view('pages/notfound', $data);
+    }
+
   }

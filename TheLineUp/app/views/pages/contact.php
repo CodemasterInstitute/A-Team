@@ -117,13 +117,13 @@ expand_more
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Peasant package</h5>
+      <h5 class="card-title">Pleasant Peasant package</h5>
       <p class="card-text">While you may not be able to enter the Royal arena, just yet, we will make sure your event is given a decent plug among the locals.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\EventRight\A-team\A-Team\TheLineUp\public\img\contact\peasantpackage.jpg" class="card-img-top" alt="Pleasant Peasant Package">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
