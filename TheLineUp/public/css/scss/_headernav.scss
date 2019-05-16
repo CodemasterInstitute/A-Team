@@ -1,0 +1,43 @@
+.navbar.bg-dark{
+    background-color: $accent-color1!important;
+}
+
+
+
+
+
+.nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 10px 0px;
+    margin: 0px 20px;
+    position: relative;
+    color: white;
+    
+  }
+  
+  .navbar-dark .navbar-nav .nav-link{
+      color:$secondry-color;
+  }
+  .nav-link:hover {
+    opacity: 1;
+  }
+  
+  .nav-link::before {
+    transition: 500ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color:black;
+  }
+  
+  .nav-link::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link:hover::before {
+    width: 100%;
+  }

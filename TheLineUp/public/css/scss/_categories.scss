@@ -1,0 +1,38 @@
+/*----------------Gallery-----------*/
+
+.container-fluid{
+    padding:0 50px;
+    }
+    
+    .container-fluid h2{
+        text-align:center;
+        font-size:35px;
+        padding-bottom:25px;
+       
+      
+    }
+    a.col-md-4.gallery{
+       margin:0;
+       padding:0 0;
+      }
+    
+    .container.gallery{
+        width:75%;
+        padding-top:0;
+        padding-bottom:100px;
+    }
+    
+    .img-fluid.galleryimage{
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+      }
+      .img-fluid.galleryimage:hover{
+        -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+      }
+
+    
+    
+      
