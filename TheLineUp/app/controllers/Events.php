@@ -18,4 +18,14 @@
       $categories = $this->eventModel->getCategoryList();
       echo json_encode($categories);
     }
+
+    public function locations(){
+      $locations = $this->eventModel->getLocations();
+      echo json_encode($locations);
+    }
+
+    public function eventNames(){
+      $names = $this->eventModel->getNames();
+      echo json_encode($names);
+    }
   }

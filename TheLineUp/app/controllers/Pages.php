@@ -14,7 +14,7 @@
 
     public function event(){
 
-      $eventID = $_GET['event_id'];
+      $eventID = $_GET['id'];
 
       $event = $this->pageModel->event($eventID);
 

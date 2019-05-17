@@ -37,4 +37,16 @@
       $results = $this->db->resultSet();
       return $results;
     }
+
+    public function getLocations(){
+      $this->db->query('SELECT DISTINCT suburb FROM events');
+      $results = $this->db->resultSet();
+      return $results;
+    }
+
+    public function getNames(){
+      $this->db->query('SELECT event_name FROM events');
+      $results = $this->db->resultSet();
+      return $results;
+    }
   }
