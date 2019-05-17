@@ -16,7 +16,11 @@
                     <h3><?php echo $data['event']->event_price; ?></h3>
                 </div>
                 <div class="col-12 text-center event-container event-container--tickets">
-                    <button type="button" class="btn btn-primary">Tickets</button>
+                    <?php if ($data['event']->tickets_avaialable != "0") : ?>
+                        <a href="<?php echo 'dashboards/orders?event_id=' . $data['event']->event_id; ?>" class="btn btn-primary">Tickets</a>
+                    <?php else : ?>
+                        <a class="btn btn-warning">Unavailable</a>
+                    <?php endif; ?>
                     <p style="padding-top:10px; margin-bottom:0; font-size: 0.8rem; color: grey;">There are <?php echo $data['event']->tickets_available; ?> tickets available for this event.</p>
                 </div>
                 <div class="col-12 col-md-6 event-container event-container--date-time">

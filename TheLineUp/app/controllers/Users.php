@@ -79,9 +79,6 @@
           $this->view('users/register', $data);
         }
 
-        
-
-
       } else {
         //init data
         $data = [
