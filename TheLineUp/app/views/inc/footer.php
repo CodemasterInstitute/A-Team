@@ -27,6 +27,9 @@
             <li>
             <a class="nav-link text-light" href="#" >T&Cs</a>
             </li>
+            <li>
+            <a class="nav-link text-light" href="#" >Contact Us</a>
+            </li>
           </ul>
       </div>
 
