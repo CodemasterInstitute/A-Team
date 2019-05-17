@@ -5,8 +5,10 @@ const nameField = document.querySelector('.name-search');
 const nameAutocomplete = document.querySelector('#name-autocomplete');
 const locationField = document.querySelector('.location-search');
 const locationAutocomplete = document.querySelector('#location-autocomplete');
-const baseUrl = window.location.origin;
+let names;
+let locations;
 let searchQuery = [];
+const baseUrl = window.location.origin;
 
 //Add search functionality to category grid
 
@@ -88,9 +90,12 @@ let searchResults = (query) => {
 nameField.addEventListener('input', () => searchNames(nameField.value));
 locationField.addEventListener('input', () => searchLocations(locationField.value));
 
-const searchNames = async input => {
+const getNames = async () => {
   const res = await fetch(`${baseUrl}/events/eventNames`)
-  const names = await res.json();
+  names = await res.json();
+}
+
+const searchNames = input => {
 
   let matches = names.filter(name => {
     const regex = new RegExp(`^${input}`, 'gi');
@@ -105,10 +110,12 @@ const searchNames = async input => {
   outputName(matches);
 };
 
-const searchLocations = async input => {
+const getLocations = async () => {
   const res = await fetch(`${baseUrl}/events/locations`)
-  const locations = await res.json();
+  locations = await res.json();
+}
 
+const searchLocations = input => {
   let matches = locations.filter(location => {
     const regex = new RegExp(`^${input}`, 'gi');
     return location.suburb.match(regex);
@@ -162,7 +169,11 @@ if (searchBtn) {
 
 
 if (categoryGridList.length > 0) {
-  categoryList();
+  window.addEventListener('DOMContentLoaded', () => {
+    getNames();
+    getLocations();
+    categoryList();
+  });
 }
 
 
