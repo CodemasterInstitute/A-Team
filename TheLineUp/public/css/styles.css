@@ -12,6 +12,7 @@ p {
 
 body {
   background-color: #f9fbfc;
+  padding-top: 78px;
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -176,6 +177,10 @@ body {
 
 .navbar.bg-dark {
   background-color: #e0004a !important;
+}
+
+.navbar {
+  height: 80px;
 }
 
 .nav-link {
