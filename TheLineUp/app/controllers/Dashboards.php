@@ -163,9 +163,13 @@
 
     public function orders(){
 
-        $data = [
-          'title' => 'Your Orders'
-        ];
+        if (isset($_GET['event_id'])) {
+          $event = $this->dashboardModel->event($_GET['event_id']);
+          echo $event;
+
+          $data['event'] = $event;
+        }
+
         $this->view('dashboard/orders', $data);
       }
   }
