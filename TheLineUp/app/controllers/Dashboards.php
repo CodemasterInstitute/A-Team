@@ -57,7 +57,7 @@
       }
 
       $data = [
-        'user' => $user
+        'user' => $_SESSION['user']
       ];
 
       $this->view('dashboard/details', $data);
@@ -157,6 +157,7 @@
           $this->dashboardModel->createEvent($eventData);
         }
 
+        $user = $_SESSION['user'];
         $userEvents = $this->dashboardModel->userEvents($user->user_id);
         $data['user_events'] = $userEvents;
 
