@@ -5,18 +5,27 @@
     }
     
     public function index(){
-      $data = [
-        'title' => 'Dashboard',
-      ];
+      
+      if (!isset($_SESSION['user'])) {
+
+        redirect('users/login');
+
+      } else {
+        $data = [
+          'title' => 'Dashboard',
+        ];
+      }
      
       $this->view('dashboard/index', $data);
     }
 
     public function details(){
 
-      $user = $_SESSION['user'];
+      if (!isset($_SESSION['user'])) {
 
-      if (isset($_POST['type']) && $_POST['type'] == 'edit'){
+        redirect('users/login');
+
+      } else if (isset($_POST['type']) && $_POST['type'] == 'edit'){
 
         $updateData = [
           'user_id' => $_SESSION['user']->user_id,
@@ -56,9 +65,11 @@
 
     public function events(){
 
-      $user = $_SESSION['user'];
+      if (!isset($_SESSION['user'])) {
 
-      if (isset($_GET['type']) && $_GET['type'] == 'create'){
+        redirect('users/login');
+
+      } else if (isset($_GET['type']) && $_GET['type'] == 'create'){
       
         $categories = $this->dashboardModel->categories();
         $data['categories'] = $categories;
@@ -163,7 +174,11 @@
 
     public function orders(){
       
-      if (isset($_POST['type']) && $_POST['type'] == 'order'){
+      if (!isset($_SESSION['user'])) {
+
+        redirect('users/login');
+
+      } else if (isset($_POST['type']) && $_POST['type'] == 'order'){
 
         // Add event id to user 'event_ids'
         $this->dashboardModel->addOrder($_SESSION['user']->user_id, $_POST['event_id']);
