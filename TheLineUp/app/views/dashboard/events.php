@@ -290,8 +290,7 @@
             <div class="row">
                 <div class="col-12">
                     <label>Event Description</label>
-                    <textarea rows="15" style="resize: none" class="form-control" name="event_description">
-                    <?php echo $data['event']->event_description; ?></textarea>
+                    <textarea rows="15" style="resize: none" class="form-control" name="event_description"><?php echo $data['event']->event_description; ?></textarea>
                 </div>
             </div>
             <div class="row">

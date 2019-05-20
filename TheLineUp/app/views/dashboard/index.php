@@ -4,7 +4,7 @@
 <div class="col-9">
     <h3>Welcome</h3>
 
-    <p>Welcome to you dashboard! Using the navigation to the left, manage your account details, your events and orders.<p>
+    <p>Welcome to your dashboard! Using the navigation to the left, manage your account details, your events and orders.<p>
 </div>
 <div class="col-0 col-md-1 col-lg-2 asevent_ide-right">
 
