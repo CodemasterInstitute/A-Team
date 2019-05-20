@@ -12,6 +12,10 @@ p {
 
 body {
   background-color: #f9fbfc;
+  padding-top: 78px;
+  position: relative;
+  padding-bottom: 315px;
+  min-height: 100vh;
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -130,6 +134,77 @@ body {
   font-size: 0.8rem;
 }
 
+.selected {
+  background: blue;
+  color: white;
+}
+
+.autocomplete-name:hover,
+.autocomplete-location:hover {
+  cursor: pointer;
+  background: blue;
+  color: white;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid black;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .event-container {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -176,6 +251,10 @@ body {
 
 .navbar.bg-dark {
   background-color: #e0004a !important;
+}
+
+.navbar {
+  height: 80px;
 }
 
 .nav-link {
@@ -234,6 +313,7 @@ a.col-md-4.gallery {
 .container.gallery {
   width: 75%;
   padding-top: 0;
+  padding-bottom: 100px;
 }
 
 .img-fluid.galleryimage {
@@ -507,6 +587,9 @@ a#forgot_pswd {
 
 footer {
   background-color: #343a40;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer h4 {
