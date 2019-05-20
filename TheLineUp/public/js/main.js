@@ -92,11 +92,13 @@ let searchResults = query => {
 };
 
 //Add autocomplete to search fields from database
+if (nameField) {
+  nameField.addEventListener("input", () => searchNames(nameField.value));
+  locationField.addEventListener("input", () =>
+    searchLocations(locationField.value)
+  );
+}
 
-nameField.addEventListener("input", () => searchNames(nameField.value));
-locationField.addEventListener("input", () =>
-  searchLocations(locationField.value)
-);
 
 const getNames = async () => {
   const res = await fetch(`${baseUrl}/events/eventNames`);
