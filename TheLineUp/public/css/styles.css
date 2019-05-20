@@ -133,6 +133,11 @@ body {
   font-size: 0.8rem;
 }
 
+.selected {
+  background: blue;
+  color: white;
+}
+
 .lds-ring {
   display: inline-block;
   position: relative;
