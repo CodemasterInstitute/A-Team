@@ -113,6 +113,13 @@
   color: white;
 }
 
+.autocomplete-name:hover,
+.autocomplete-location:hover {
+  cursor: pointer;
+  background: blue;
+  color: white;
+}
+
 .lds-ring {
   display: inline-block;
   position: relative;
