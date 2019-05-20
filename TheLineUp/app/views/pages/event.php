@@ -16,8 +16,8 @@
                     <h3><?php echo $data['event']->event_price; ?></h3>
                 </div>
                 <div class="col-12 text-center event-container event-container--tickets">
-                    <?php if ($data['event']->tickets_avaialable != "0") : ?>
-                        <a href="<?php echo 'dashboards/orders?event_id=' . $data['event']->event_id; ?>" class="btn btn-primary">Tickets</a>
+                    <?php if ($data['event']->tickets_available != "0") : ?>
+                        <a href="<?php echo URLROOT . '/dashboards/orders?event_id=' . $data['event']->event_id; ?>" class="btn btn-primary">Tickets</a>
                     <?php else : ?>
                         <a class="btn btn-warning">Unavailable</a>
                     <?php endif; ?>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-12 col-md-6 event-container event-container--location">
                     <h5>Location</h5>
-                    <h6 id="address" value=""><?php echo $data['event']->address_id; ?></h6>
+                    <h6 id="address" value=""></h6>
                 </div>
                 <div class="col-12 event-container event-container--description">
                     <h5>Description</h5>
