@@ -9,7 +9,10 @@
       <?php if(isset($_SESSION['user'])) : ?>
         <li class="nav-item active"><a class="nav-link" href="<?php echo URLROOT; ?>/pages/index">Events <span class="sr-only">(current)</span></a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT; ?>/pages/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT; ?>/dashboards">Dashboard</a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Log Out</a></li>
+        
+
       <?php else: ?>
         <li class="nav-item active"><a class="nav-link" href="<?php echo URLROOT; ?>/pages/index">Events <span class="sr-only">(current)</span></a></li>
         <li class="nav-item"><a class="nav-link" href="<?php echo URLROOT; ?>/pages/contact">Contact</a></li>
