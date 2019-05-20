@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-  <a href="index.php"> <img class="navbar-brand mr-auto" alt="logo" src="<?php echo URLROOT . '/img/redlogo.png' ?>" /> </a>
+  <a href="<?php echo URLROOT; ?>/"> <img class="navbar-brand mr-auto" alt="logo" src="<?php echo URLROOT . '/img/redlogo.png' ?>" /> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
