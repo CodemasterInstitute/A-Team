@@ -94,6 +94,74 @@
 
     }
 
+    public function addOrder($userID, $eventID){
+
+
+      $userID = (int)$userID;
+      $this->db->query('SELECT * FROM users WHERE user_id = :user_id');
+      $this->db->bind(':user_id', $userID);
+      $user = $this->db->single();
+
+      // decode JSON in event_ids
+      $userOrders = json_decode($user->event_ids, true);
+
+      // add event id
+      if ($userOrders == "" || count($userOrders) == 0){
+        $userOrders[0]->event_id = $eventID;
+      } else {
+        $userOrders[count($userOrders)]->event_id = $eventID;
+      }
+
+      // encode events_ids back to JSON
+      $userOrders = json_encode($userOrders);
+
+      // Insert orders back into user
+      $this->db->query('UPDATE users SET event_ids = :event_ids WHERE user_id = :user_id');
+      $this->db->bind('event_ids', $userOrders);
+      $this->db->bind('user_id', $userID);
+      $this->db->execute();
+
+      // Reduce available tickets by 1
+      $this->db->query('SELECT * FROM events WHERE event_id = :event_id');
+      $this->db->bind(':event_id', $eventID);
+      $event = $this->db->single();
+
+      $ticketsAvailable = $event->tickets_available - 1;
+
+      $this->db->query('UPDATE events SET tickets_available = :tickets_available WHERE event_id = :event_id');
+      $this->db->bind('tickets_available', $ticketsAvailable);
+      $this->db->bind('event_id', $eventID);
+      $this->db->execute();
+
+    }
+
+    public function getOrders($userID){
+
+      $this->db->query('SELECT event_ids FROM users WHERE user_id = :user_id');
+      $this->db->bind('user_id', $userID);
+      $userOrders = $this->db->single();
+      $userOrders = json_decode($userOrders->event_ids, true);
+
+
+      if (count($userOrders) > 0){
+        
+        for ($i = 0; $i < count($userOrders); $i++) {
+          $this->db->query('SELECT * FROM events WHERE event_id = :event_id');
+          $this->db->bind('event_id', $userOrders[$i]['event_id']);
+          $orders[$i] = $this->db->single();
+        }
+
+        return $orders;
+
+      } else {
+
+        return null;
+
+      }
+
+
+    }
+
   }
 
 ?>

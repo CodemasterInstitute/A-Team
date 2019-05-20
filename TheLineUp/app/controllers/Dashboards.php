@@ -162,14 +162,26 @@
     }
 
     public function orders(){
+      
+      if (isset($_POST['type']) && $_POST['type'] == 'order'){
 
-        if (isset($_GET['event_id'])) {
-          $event = $this->dashboardModel->event($_GET['event_id']);
-          echo $event;
+        // Add event id to user 'event_ids'
+        $this->dashboardModel->addOrder($_SESSION['user']->user_id, $_POST['event_id']);
+        $data = array();
+        redirect('dashboards/orders');
 
-          $data['event'] = $event;
-        }
 
+      } else if (isset($_GET['event_id'])) {
+        
+        $event = $this->dashboardModel->event($_GET['event_id']);
+        $data['event'] = $event;
+        
+      } else {
+
+        // Get all orders
+        $orders = $this->dashboardModel->getOrders($_SESSION['user']->user_id);
+        $data['orders'] = $orders;
+      }
         $this->view('dashboard/orders', $data);
       }
   }
