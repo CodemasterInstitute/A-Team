@@ -38,7 +38,17 @@
                 </div>
                 <div class="col-12 col-md-6 event-container event-container--location">
                     <h5>Location</h5>
-                    <h6 id="address" value=""></h6>
+                    <h6 id="street-address">
+                    <?php if ($data['event']->unit_number != 0){
+                        $unitNumber = $data['event']->unit_number . "/ ";
+                    } else {
+                        $unitNumber = "";
+                    }
+                    echo $unitNumber . $data['event']->street_number . " " . $data['event']->street_name . " " . $data['event']->street_type . ", " . $data['event']->suburb;
+                    ?>
+                    </h6>
+                    <h6 id="state-address"><?php echo $data['event']->state . ", " . $data['event']->postcode;?></h6>
+                    <h6 id="country-address"><?php echo $data['event']->country; ?></h6>
                 </div>
                 <div class="col-12 event-container event-container--description">
                     <h5>Description</h5>
@@ -66,7 +76,10 @@
       }
 
       function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').innerHTML;
+        var street = document.getElementById('street-address').innerHTML;
+        var state = document.getElementById('state-address').innerHTML;
+        var country = document.getElementById('country-address').innerHTML;
+        var address = street + state + country;
         console.log(address);
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
