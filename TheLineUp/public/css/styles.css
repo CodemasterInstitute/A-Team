@@ -294,6 +294,10 @@ body {
   width: 100%;
 }
 
+.navbar-collapse.collapse.show {
+  background-color: #e0004a;
+}
+
 /*----------------Gallery-----------*/
 .container-fluid {
   padding: 0 50px;
@@ -671,6 +675,10 @@ footer .nav-link {
 
 .dashboard-link-container div {
   padding: 0;
+}
+
+.memdash.row {
+  margin: 0;
 }
 
 .oopsbox {
