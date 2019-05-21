@@ -1,5 +1,5 @@
 
-       <div class="row">
+       <div class="memdash row">
         <div class="col-0 col-md-1 col-lg-2 aside-left">
 
         
