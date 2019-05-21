@@ -1,10 +1,10 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 <div class="dashboard-container row">
-    <div class="col-0">
+    <div class="col-0 col-md-2">
 
     </div>
-    <div class="col-12">
+    <div class="col-12 col-md-8">
         <div class="row">
             <?php require APPROOT . '/views/inc/dashboardnav.php'; ?>
         </div>
@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="col-0">
+    <div class="col-0 col-md-2">
 
     </div>
 </div>

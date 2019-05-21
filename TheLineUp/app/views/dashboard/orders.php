@@ -1,10 +1,10 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 <div class="dashboard-container row">
-    <div class="col-0">
+    <div class="col-0 col-md-2">
 
     </div>
-    <div class="col-12">
+    <div class="col-12 col-md-8">
     <div class="row">
         <?php require APPROOT . '/views/inc/dashboardnav.php'; ?>
     </div>
@@ -42,7 +42,7 @@
                     <div class="col-4">
                         <p><?php echo $order->event_name; ?></p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 text-right">
                         <a class="dashboard-link" href="<?php echo URLROOT . '/pages/event?id=' . $order->event_id; ?>">View Event</a>
                     </div>
                     <hr />
@@ -53,7 +53,9 @@
         <?php endif; ?>
 
     <?php endif; ?>
+    <div class="col-0 col-md-2">
 
+</div>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
