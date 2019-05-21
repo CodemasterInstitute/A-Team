@@ -1,0 +1,26 @@
+$primary-color: #000000;
+$secondry-color:#f9fbfc;
+$accent-color1:#e0004a;
+$accent-color2:#44bba4;
+$accent-color3:#75dbcd;
+
+h1,
+h2,
+h3,
+.nav-item {
+  font-family: 'Raleway', Sans-Serif;
+}
+
+p {
+  font-family: 'Open Sans', Sans-Serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: $secondry-color;
+  padding-top:78px;
+  position:relative;
+  padding-bottom:315px;
+  min-height:100vh;
+  
+}

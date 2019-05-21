@@ -1,0 +1,46 @@
+.dashboard-title {
+    margin: 20px 0 20px 0;
+    border-bottom: solid 1px lightgrey;
+}
+
+.dashboard-form {
+    width: 100%;
+}
+
+.dashboard-form-input {
+    width: 100%;
+}
+
+.dashboard-form-textarea {
+    width: 100%;
+}
+
+.dashboard-form-button {
+    color: black;
+    margin: 10px 15px 10px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.dashboard-link, .dashboard-link:hover {
+    color: black;
+    margin: 10px 15px 10px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.dashboard-link:hover {
+    cursor: pointer;
+}
+
+.dashboard-link-container {
+    margin: 10px 0;
+}
+
+.dashboard-link-container div {
+    padding: 0;
+}
