@@ -22,7 +22,7 @@
       if($categoryID == 'All') {
         $this->db->query('SELECT * FROM events WHERE event_name LIKE :name AND suburb LIKE :location');
       } else {
-        $this->db->query('SELECT * FROM events WHERE event_name LIKE :name AND suburb LIKE :location AND category_id = :category ORDER BY start_date DESC');
+        $this->db->query('SELECT * FROM events WHERE event_name LIKE :name AND suburb LIKE :location AND category_id = :category ORDER BY start_date ASC');
         $this->db->bind(':category', $categoryID);
       }
       $this->db->bind(':name', $name);
