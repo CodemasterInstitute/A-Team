@@ -60,6 +60,11 @@
     background: $secondry-color;
   }
 }
+.search-container {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .card-container {
   padding: 0;
@@ -69,54 +74,29 @@
   }
 }
 
-.event-card {
-  height: 150px;
+.event-details {
   display: flex;
-  padding: 0;
-  background-color: white;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
+  justify-content: space-between;
 
-  &:last-of-type {
-    margin-bottom: 50px;
-  }
-
-  .card-image {
-    height: 150px;
-    width: 200px;
-
-    img {
-      height: 150px;
-      width: 200px;
-      object-fit: cover;
-    }
-  }
-
-  .card-content {
-    padding: 10px 20px;
-
-    .card-title {
-      margin: 0;
-      font-weight: bold;
-      padding: 0;
-    }
-
-    .card-description {
-      margin: 5px 0;
-    }
-
-    .event-details {
-      display: flex;
-      justify-content: space-between;
-
-      p {
-        display: inline;
-        font-size: 0.8rem;
-      }
-    }
+  p {
+    display: inline;
+    font-size: 0.8rem;
   }
 }
 
+.card.mb-12 {
+  margin: 10px 0;
+}
+
+.col-md-4.search img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+#no-results {
+font-size: 2rem;
+padding-bottom: 20px;
+}
 .selected {
   background: $accent-color2 !important;
   color: white;
@@ -154,6 +134,7 @@
   position: relative;
   width: 64px;
   height: 64px;
+  margin: 0 auto;
 }
 
 .lds-ring div {

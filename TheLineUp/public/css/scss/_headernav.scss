@@ -11,7 +11,9 @@ li.nav-item.main{
   background-color: $accent-color1;
 }
 
-
+img.navbar-brand.mr-auto {
+  padding-left: 10px !important;
+}
 
 .nav-link.main {
     font-weight: bold;

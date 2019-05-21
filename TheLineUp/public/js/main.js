@@ -43,8 +43,7 @@ let categoryList = () => {
 //Search database from search input
 
 let searchResults = query => {
-  searchContainer.innerHTML = `<h1>Upcoming Events</h1>
-                               <div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
+  searchContainer.innerHTML = `<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
   fetch(`${baseUrl}/events/${query}`, {
       method: "post",
       headers: {
@@ -59,33 +58,35 @@ let searchResults = query => {
     })
     .then(res => res.json())
     .then(data => {
-      searchContainer.innerHTML = `<h1>Upcoming Events</h1>`;
+      searchContainer.innerHTML = "";
       if (data.length < 1) {
-        searchContainer.innerHTML += "<p>No results found</p>";
+        searchContainer.innerHTML += "<p id='no-results'>No results found</p>";
       } else {
         data.forEach(el => {
-          searchContainer.innerHTML += `<div class="event-card col-lg-8">
-              <div class="card-image">
-              <img src="../img/events/${el.event_image}" alt="Card image for: ${
-            el.event_name
-          }" />
+          searchContainer.innerHTML += `<div class="card mb-12">
+          <div class="row no-gutters">
+            <div class="col-md-4 search">
+              <img src="../img/events/${el.event_image}" class="card-img" alt="Card image for: ${
+                el.event_name}">
             </div>
-            <div class="card-content">
-              <div class="card-title">${el.event_name}</div>
-              <div class="card-description">
-                ${truncate_text(
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${el.event_name}</h5>
+                <p>${truncate_text(
                   el.event_description
                 )} <a href="${baseUrl}/pages/event?id=${
             el.event_id
-          }">Find out more</a>
+          }">Find out more</a></p>
+          <div class="event-details">
+          <p>${el.start_date}</p>
+          <p>${el.suburb}</p>
+          <p>$${el.event_price}</p>
+        </div>
               </div>
-              <div class="event-details">
-                <p>${el.start_date}</p>
-                <p>${el.suburb}</p>
-                <p>$${el.event_price}</p>
-              </div>
-              </div>
-            </div>`;
+            </div>
+          </div>
+        </div>`;          
+
         });
       }
     });
