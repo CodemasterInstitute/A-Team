@@ -15,21 +15,21 @@
           <h4>Events</h4>
           <ul class="list-unstyled text-light">
             <li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/index" >Categories</a>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/pages/index" >Categories</a>
             </li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >Advertise your event</a>
-            </li>
-            <li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/users/login" >My Account log in</a>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/pages/contact" >Advertise your event</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >FAQs</a>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/users/login" >My Account log in</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >T&Cs</a>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/pages/contact" >FAQs</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >Contact Us</a>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/pages/contact" >T&Cs</a>
+            </li>
+            <li>
+            <a class="nav-link main text-light" href="<?php echo URLROOT; ?>/pages/contact" >Contact Us</a>
             </li>
           </ul>
       </div>
@@ -37,10 +37,10 @@
       <div class="col-sm-4 footer-right">
         <h4>Connect With Us</h4>
         <ul class="list-unstyled text-light">
-        <li><a class="nav-link text-light" href="#" ><i class="fab fa-facebook-f pr-1"></i> Facebook</a></li>
-        <li><a class="nav-link text-light" href="#" >
+        <li><a class="nav-link main text-light" href="#" ><i class="fab fa-facebook-f pr-1"></i> Facebook</a></li>
+        <li><a class="nav-link main text-light" href="#" >
           <i class="fab fa-twitter pr-1"></i> Twitter</a></li>
-          <li><a class="nav-link text-light" href="#" ><i class="fab fa-instagram pr-1"></i> Instagram</a></li>
+          <li><a class="nav-link main text-light" href="#" ><i class="fab fa-instagram pr-1"></i> Instagram</a></li>
 </ul>
         </div>
         <div class="row copyright">

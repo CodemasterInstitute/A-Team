@@ -13,7 +13,7 @@
                     <h3><?php echo $data['event']->event_name; ?></h3>
                 </div>
                 <div class="col-6 text-right event-container event-container--price">
-                    <h3><?php echo $data['event']->event_price; ?></h3>
+                    <h3>$ <?php echo $data['event']->event_price; ?></h3>
                 </div>
                 <div class="col-12 text-center event-container event-container--tickets">
                     <?php if ($data['event']->tickets_available != "0") : ?>

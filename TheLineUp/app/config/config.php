@@ -8,6 +8,6 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'http://localhost:8888');
+  define('URLROOT', 'http://projects.codemasterinstitute.com/ateam');
   // Site Name
   define('SITENAME', 'TheLineUp');
