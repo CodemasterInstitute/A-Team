@@ -1,12 +1,20 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<?php include APPROOT . '/views/inc/memdash.php'; ?>
 
-    <div class="col-9">
+<div class="dashboard-container row">
+    <div class="col-0">
+
+    </div>
+    <div class="col-12">
+    <div class="row">
+        <?php require APPROOT . '/views/inc/dashboardnav.php'; ?>
+    </div>
     <?php if (isset($_GET['type']) && $_GET['type'] == 'create'): ?>
 
-        <h3>Create Event</h3>
         <form class="form-group" method="post" action="events" enctype="multipart/form-data">
             <div class="row">
+            <div class="col-12 dashboard-title">
+                <h3>Create Event</h3>
+            </div>
                 <div class="col-12">
                     <label>Event Name</label>
                     <input class="form-control" type="text" name="event_name" />
@@ -195,11 +203,13 @@
             <button class="dashboard-form-button" type="submit">Create</button>
         </form>
 
-    <?php elseif (isset($_GET['type']) && $_GET['type'] == 'edit'): ?>
+        <?php elseif (isset($_GET['type']) && $_GET['type'] == 'edit'): ?>
 
-        <h3>Edit Event</h3>
         <form class="form-group" method="post" action="events">
             <div class="row">
+            <div class="col-12 dashboard-title">
+                <h3>Edit Event</h3>
+            </div>
                 <div class="col-12">
                     <label>Event Name</label>
                     <input class="form-control" type="text" name="event_name" value="<?php echo $data['event']->event_name; ?>" />
@@ -386,20 +396,26 @@
         </form>
 
 
-    <?php elseif (isset($_GET['type']) && $_GET['type'] == 'delete'): ?>
+        <?php elseif (isset($_GET['type']) && $_GET['type'] == 'delete'): ?>
 
-        <h3>Delete Event</h3>
-        <p> If you are sure you want to DELETE your event "EVENT NAME" please enter your password below and select 'Delete'.</p>
+        <div class="col-12 dashboard-title">
+                <h3>Delete Event</h3>
+            </div>
+            <div class="col-12 dashboard-content">
+            <p> If you are sure you want to DELETE your event "EVENT NAME" please enter your password below and select 'Delete'.</p>
                     <form class="members-form" method="post" action="members/events.php">
                         <input class="members-form-input" type="text" name="delete-check" />
-                        <button class="members-form-button" type="submit">Delete</button>
+                        <button class="dashboard-form-button" type="submit">Delete</button>
                     </form>
+            </div>
+        
                 
         <?php else: ?>
 
-            <h3>Your Events</h3>
-            <hr/>
             <div class="row">
+            <div class="col-12 dashboard-title">
+                <h3>Your Events</h3>
+            </div>
                 <div class="col-12 text-right">
                 <a href="events?type=create" class="dashboard-link">Create New Event</a>
                 </div>
@@ -420,10 +436,10 @@
 
             <?php foreach($data['user_events'] as $event): ?>
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-5">
                         <p><?php echo $event->event_name; ?></p>
                     </div>
-                    <div class="col-5 text-right">
+                    <div class="col-7 text-right">
                         <a href="events?type=edit&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Edit</a>
                         <a href="events?type=delete&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Delete</a>
                     </div>
@@ -432,13 +448,10 @@
             <?php endforeach; ?>
 
         <?php endif; ?>
-
-        </div>
-        <div class="col-0 col-md-1 col-lg-2 aside-right">
-
-        </div>
     </div>
-</div>
+    <div class="col-0">
+
+    </div>
 </div>
 
 

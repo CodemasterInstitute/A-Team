@@ -1,16 +1,25 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<?php include APPROOT . '/views/inc/memdash.php'; ?>
 
-<div class="col-9">
-    <h3>Welcome</h3>
+<div class="dashboard-container row">
+    <div class="col-0">
 
-    <p>Welcome to your dashboard! Using the navigation to the left, manage your account details, your events and orders.<p>
-</div>
-<div class="col-0 col-md-1 col-lg-2 asevent_ide-right">
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <?php require APPROOT . '/views/inc/dashboardnav.php'; ?>
+        </div>
+        <div class="row">
+            <div class="col-12 dashboard-title">
+                <h3>Welcome</h3>
+            </div>
+            <div class="col-12 dashboard-content">
+                <p>Welcome to your dashboard! Using the navigation to the left, manage your account details, your events and orders.<p>
+            </div>
+        </div>
+    </div>
+    <div class="col-0">
 
-</div>
-</div>
-</div>
+    </div>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
