@@ -255,6 +255,11 @@ body {
 
 .navbar {
   height: 80px;
+  padding: 0;
+}
+
+li.nav-item {
+  background-color: #e0004a;
 }
 
 .nav-link {
@@ -296,6 +301,7 @@ body {
 
 .navbar-collapse.collapse.show {
   background-color: #e0004a;
+  width: 100%;
 }
 
 /*----------------Gallery-----------*/
