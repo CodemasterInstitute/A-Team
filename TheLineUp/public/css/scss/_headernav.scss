@@ -4,8 +4,12 @@
 
 .navbar.main{
   height: 80px;
+  padding:0;
 }
 
+li.nav-item{
+  background-color: $accent-color1;
+}
 
 
 
@@ -47,5 +51,5 @@
 
   .navbar-collapse.collapse.show{
     background-color: $accent-color1;
- 
+ width:100%;
   }

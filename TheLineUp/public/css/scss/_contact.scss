@@ -1,3 +1,24 @@
+.carousel-caption.lowdown {
+    bottom: 160px !important;
+    font-weight: bold !important; 
+}
+
+.carousel-caption.lowdown.white {
+    color: black;
+}
+
+.carousel-item img#contact-light {
+    // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    // filter: grayscale(80%);
+    opacity: 0.6;
+  }
+
+  .container.contact-info h3 {
+    text-align: center;
+    padding: 20px;
+    font-style: italic; 
+}
+
 .card .contact{
     border: none;
     text-decoration: none;
