@@ -16,7 +16,7 @@
 
     <?php if (isset($_GET['event_id'])): ?>
         <p>Are you sure you want to book your place for <?php echo $data['event']->event_name; ?>? If so, select 'Order' below.</p>
-        <form method="post" action="/dashboards/orders">
+        <form method="post" action="orders">
             <div class="row">
                 <div class="form-group col-12">
                     <button type="submit" value="submit">Order</button>
