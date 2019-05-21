@@ -1,0 +1,42 @@
+.members-title {
+    margin: 20px 0 20px 0;
+    border-bottom: solid 1px lightgrey;
+}
+
+.members-form {
+    width: 100%;
+}
+
+.members-form-input {
+    width: 100%;
+}
+
+.members-form-button {
+    color: black;
+    margin: 10px 15px 10px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.members-link, .members-link:hover {
+    color: black;
+    margin: 10px 15px 10px 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.members-link:hover {
+    cursor: pointer;
+}
+
+.members-link-container {
+    margin: 10px 0;
+}
+
+.members-link-container div {
+    padding: 0;
+}
