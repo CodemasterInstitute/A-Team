@@ -172,6 +172,7 @@ const searchLocations = input => {
 };
 
 const outputName = matches => {
+
   if (matches.length > 0) {
     const html = matches
       .map(
@@ -182,6 +183,9 @@ const outputName = matches => {
       .join("");
     nameAutocomplete.classList.remove('hidden');
     nameAutocomplete.innerHTML = html;
+  } else {
+    nameAutocomplete.classList.add('hidden');
+    nameAutocomplete.innerHTML = '';
   }
 };
 
@@ -197,6 +201,9 @@ const outputLocation = matches => {
 
     locationAutocomplete.classList.remove('hidden');
     locationAutocomplete.innerHTML = html;
+  } else {
+    locationAutocomplete.classList.add('hidden');
+    locationAutocomplete.innerHTML = '';
   }
 };
 
