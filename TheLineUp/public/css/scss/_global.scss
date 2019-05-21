@@ -19,8 +19,8 @@ p {
 body {
   background-color: $secondry-color;
   padding-top:78px;
-  position:relative;
-  padding-bottom:356px;
-  min-height:100vh;
-  
+}
+
+main {
+  min-height: calc(100vh - 357px - 80px);
 }
