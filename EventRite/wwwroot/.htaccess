@@ -1,7 +1,0 @@
-DirectoryIndex server/view/index.php
-
-RewriteEngine on
-
-RewriteRule ^([^/]+)$ server/view/$1 [L]
-
-RewriteRule ^([^/]+)/([^/]+)$ server/view/$1/$2 [L]
