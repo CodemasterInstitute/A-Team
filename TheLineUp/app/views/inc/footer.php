@@ -15,21 +15,21 @@
           <h4>Events</h4>
           <ul class="list-unstyled text-light">
             <li>
-            <a class="nav-link text-light" href="#" >Categories</a>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/index" >Categories</a>
             </li>
-            <a class="nav-link text-light" href="#" >Advertise your event</a>
-            </li>
-            <li>
-            <a class="nav-link text-light" href="#" >My Account log in</a>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >Advertise your event</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >FAQs</a>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/users/login" >My Account log in</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >T&Cs</a>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >FAQs</a>
             </li>
             <li>
-            <a class="nav-link text-light" href="#" >Contact Us</a>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >T&Cs</a>
+            </li>
+            <li>
+            <a class="nav-link text-light" href="<?php echo URLROOT; ?>/pages/contact" >Contact Us</a>
             </li>
           </ul>
       </div>
