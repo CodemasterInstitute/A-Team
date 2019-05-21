@@ -2,168 +2,17 @@
 <div class="jumbotron jumbotron-fluid post">
   <div class="container">
     <h1 class="display-4">The Low Down</h1>
+    <h3>Whether you're an event organiser, attendee or advertiser, <br>here is all of the info you need in the one place</h3>
   </div>
   </div>
 
 <!-- Anchor cards to click down to the section you want info about -->
 
 <div class="accordion" id="accordionExample">
-  <div class="card contact">
-    <div class="card-header">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Contact <i class="material-icons">
-expand_more
-</i> 
-        </button>
-      </h2>
-    </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        <p>The Line Up team is always happy to receive feedback — complimentary or constructive. If you have a question, we recommend you check out our FAQs (below) first for a much quicker response on general queries. But, if you can't find what you're looking for, then please drop us an email and a friendly member from our Line Up Care Centre will respond within 48 hours.</p>
+<!-- FAQs start -->
 
-    <!-- contact form -->
-      <div class="col-md-6 col-md-offset-3" id="contact" >
-        <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
-          <fieldset>
-    
-            <!-- First Name input-->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="fname"></label>
-              <div class="col-md-9">
-                <input id="fname" name="fname" type="text" placeholder="First name" class="form-control" required>
-              </div>
-            </div>
-
-             <!-- Last Name input-->
-             <div class="form-group">
-              <label class="col-md-3 control-label" for="lname"></label>
-              <div class="col-md-9">
-                <input id="lname" name="lname" type="text" placeholder="Last name" class="form-control" required>
-              </div>
-            </div>
-    
-            <!-- Email input-->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="email"></label>
-              <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Your email address" class="form-control" required>
-              </div>
-            </div>
-    
-            <!-- Message body -->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="message"></label>
-              <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="What can we help you with?" rows="5" required></textarea>
-              </div>
-            </div>
-    
-            <!-- Form actions -->
-            <div class="form-group">
-              <div class="col-md-12" id="contact-submit">
-                <button type="submit" class="btn btn-primary btn-sm">Send to The Line Up Care team</button>
-              </div>
-            </div>
-          </fieldset>
-          </form>
-        </div>
-      </div>
-<!----contact form ends here---->
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="card contact">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-         Socials <i class="material-icons">
-expand_more
-</i>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body" id="socials">
-      <button type="button" class="btn btn-outline-light">#thelineup</button>
-      <button type="button" class="btn btn-outline-light">#lineupevents</button>
-      <button type="button" class="btn btn-outline-light"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
-      <button type="button" class="btn btn-outline-light"><i class="fab fa-twitter pr-1"></i> Twitter</button>
-      <button type="button" class="btn btn-outline-light"><i class="fab fa-instagram pr-1"></i> Instagram</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card contact">
-    <div class="card-header">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Advertising <i class="material-icons">
-expand_more
-</i>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-
-      <!-- Advertising tiers -->
-      <div class="card-group">
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Pleasant Peasant package</h5>
-      <p class="card-text">While you may not be able to enter the Royal arena, just yet, we will make sure your event is given a decent plug among the locals.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="C:\Users\Beth\Desktop\Coding\Codemasters\Projects\EventRight\A-team\A-Team\TheLineUp\public\img\contact\peasantpackage.jpg" class="card-img-top" alt="Pleasant Peasant Package">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-
-<!-- advertising ends -->
-      </div>
-    </div>
-  </div>
-
-  <div class="card contact">
-    <div class="card-header">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          My Account <i class="material-icons">
-expand_more
-</i>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div class="card-body">
-        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-      <button class="btn btn-primary btn-sm" id="myAccount"><a href="<?php echo URLROOT; ?>/users/login">Login to My Account</a></button>
-      </div>
-    </div>
-  </div>
-
-  <div class="card contact">
+<div class="card contact">
     <div class="card-header">
       <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -232,11 +81,112 @@ close
     </div>
   </div>
 
+  <!-- FAQs end -->
+
+<!-- Socials start -->
+
+  <div class="card contact">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Follow Our Socials <i class="material-icons">
+expand_more
+</i>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body" id="socials">
+      <button type="button" class="btn btn-outline-light">#thelineup</button>
+      <button type="button" class="btn btn-outline-light">#lineupevents</button>
+      <button type="button" class="btn btn-outline-light"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
+      <button type="button" class="btn btn-outline-light"><i class="fab fa-twitter pr-1"></i> Twitter</button>
+      <button type="button" class="btn btn-outline-light"><i class="fab fa-instagram pr-1"></i> Instagram</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Socials ends -->
+
+  <!-- Adverting starts -->
+  <div class="card contact">
+    <div class="card-header">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Advertise Your Event <i class="material-icons">
+expand_more
+</i>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+
+      <!-- Advertising tiers -->
+      <div class="card-group ads">
+  <div class="card ad">
+    <img src="<?php echo URLROOT ?>/img/contact/peasantpackage.jpg" class="card-img-top" alt="Pleasant Peasant Package">
+    <div class="card-body ad">
+      <h5 class="card-title">Pleasant Peasant package</h5>
+      <p class="card-text">For even the smallest budget, we will make sure your event is given a decent plug among the locals and beyond.</p>
+      <p class="card-text">Under $5K</p>
+    </div>
+  </div>
+  <div class="card ad">
+  <img src="<?php echo URLROOT ?>/img/contact/luxuriouslord.jpg" class="card-img-top" alt="Luxurious Lords Lot">
+    <div class="card-body ad">
+      <h5 class="card-title">Luxurious Lord's Lot</h5>
+      <p class="card-text">Your event will be widely distributed throughout the kindgom of which it is located. We would love to discuss all of the creative ways to make sure it's a sold out event.</p>
+      <p class="card-text">$10-$50K</p>
+    </div>
+  </div>
+  <div class="card ad">
+  <img src="<?php echo URLROOT ?>/img/contact/kingsandqueensbox.jpg" class="card-img-top" alt="Kings and Queens Box">
+    <div class="card-body ad">
+      <h5 class="card-title">Kings and Queens Box</h5>
+      <p class="card-text">Your request is our command. You will be front row viewing rights as well as a variety of other social and marketing initiatives to gather full momentum for your event.</p>
+      <p class="card-text">More than $50K</p>
+    </div>
+  </div>
+</div>
+
+<!-- advertising tiers end -->
+      </div>
+    </div>
+  </div>
+
+  <!-- advertising ends -->
+
+  <!-- My account starts -->
+
+  <div class="card contact">
+    <div class="card-header">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          My Account Explained<br><h6>One Account to Organise, Attend and Advertise Events</h6><i class="material-icons">
+expand_more
+</i>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+      <button class="btn btn-primary btn-sm" id="myAccount"><a href="<?php echo URLROOT; ?>/users/login">Login to My Account</a></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- My account ends -->
+
+
+  <!-- Legal stuff starts -->
+
   <div class="card contact">
     <div class="card-header">
       <h2 class="mb-0">
         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Legal Stuff <i class="material-icons">
+          T&Cs<i class="material-icons">
 expand_more
 </i>
         </button>
@@ -307,6 +257,81 @@ expand_more
 <p>If you have any questions about these Terms, please contact us.</p>
       </div>
     </div>
+
+    <!-- Legal stuff ends -->
+
+    <!-- Contact Us starts -->
+
+    <div class="card contact">
+    <div class="card-header">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Contact Us<i class="material-icons">
+expand_more
+</i> 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>The Line Up team is always happy to receive feedback — complimentary or constructive. If you have a question, we recommend you check out our FAQs (below) first for a much quicker response on general queries. But, if you can't find what you're looking for, then please drop us an email and a friendly member from our Line Up Care Centre will respond within 48 hours.</p>
+
+    <!-- contact form -->
+      <div class="col-md-6 col-md-offset-3" id="contact" >
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+    
+            <!-- First Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="fname"></label>
+              <div class="col-md-9">
+                <input id="fname" name="fname" type="text" placeholder="First name" class="form-control" required>
+              </div>
+            </div>
+
+             <!-- Last Name input-->
+             <div class="form-group">
+              <label class="col-md-3 control-label" for="lname"></label>
+              <div class="col-md-9">
+                <input id="lname" name="lname" type="text" placeholder="Last name" class="form-control" required>
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email"></label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Your email address" class="form-control" required>
+              </div>
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message"></label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="What can we help you with?" rows="5" required></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12" id="contact-submit">
+                <button type="submit" class="btn btn-primary btn-sm">Send to The Line Up Care team</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+<!----contact form ends ---->
+      </div>
+    </div>
+
+    <!-- contact us ends -->
+
+  </div>
   </div>
 
 </div>

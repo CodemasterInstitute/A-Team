@@ -1,21 +1,17 @@
-.dashboard-title {
+.members-title {
     margin: 20px 0 20px 0;
     border-bottom: solid 1px lightgrey;
 }
 
-.dashboard-form {
+.members-form {
     width: 100%;
 }
 
-.dashboard-form-input {
+.members-form-input {
     width: 100%;
 }
 
-.dashboard-form-textarea {
-    width: 100%;
-}
-
-.dashboard-form-button {
+.members-form-button {
     color: black;
     margin: 10px 15px 10px 0;
     border: solid 1px black;
@@ -24,7 +20,7 @@
     text-decoration: none;
 }
 
-.dashboard-link, .dashboard-link:hover {
+.members-link, .members-link:hover {
     color: black;
     margin: 10px 15px 10px 0;
     border: solid 1px black;
@@ -33,18 +29,14 @@
     text-decoration: none;
 }
 
-.dashboard-link:hover {
+.members-link:hover {
     cursor: pointer;
 }
 
-.dashboard-link-container {
+.members-link-container {
     margin: 10px 0;
 }
 
-.dashboard-link-container div {
+.members-link-container div {
     padding: 0;
-}
-
-.memdash.row{
-    margin:0;
 }
