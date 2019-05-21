@@ -27,8 +27,14 @@
             <?php foreach($data['orders'] as $order): ?>
 
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-3">
+                        <p><?php echo $order->start_date; ?></p>
+                    </div>
+                    <div class="col-6">
                         <p><?php echo $order->event_name; ?></p>
+                    </div>
+                    <div class="col-3">
+                        <a class="dashboard-link" href="<?php echo URLROOT . '/pages/event?id=' . $order->event_id; ?>">View Event</a>
                     </div>
                     <hr />
                 </div>

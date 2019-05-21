@@ -398,26 +398,34 @@
         <?php else: ?>
 
             <h3>Your Events</h3>
-            <a href="events?type=create" class="members-link">Create New Event</a>
             <hr/>
+            <div class="row">
+                <div class="col-12 text-right">
+                <a href="events?type=create" class="dashboard-link">Create New Event</a>
+                </div>
+            </div>
+            <br />
             <?php if (isset($data['errors'])): ?>
-                <div style="border: solid 1px red; border-radius: 5px; padding: 10px; color: red;" class="error-message">
+                <div style="border: solid 1px red; border-radius: 5px; padding: 10px; color: red;" class="error-message row">
+                <div class="col-12">
                 <?php foreach($data['errors'] as $error){
                     echo  $error . '<br />';
                 }
                 ?>
+                </div>
+                
                 </div>
                 <br />
             <?php endif; ?>
 
             <?php foreach($data['user_events'] as $event): ?>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-7">
                         <p><?php echo $event->event_name; ?></p>
                     </div>
-                    <div class="col-3 text-right">
-                        <a href="events?type=edit&event_id=<?php echo $event->event_id; ?>" class="members-link">Edit</a>
-                        <a href="events?type=delete&event_id=<?php echo $event->event_id; ?>" class="members-link">Delete</a>
+                    <div class="col-5 text-right">
+                        <a href="events?type=edit&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Edit</a>
+                        <a href="events?type=delete&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Delete</a>
                     </div>
                     <hr />
                 </div>
