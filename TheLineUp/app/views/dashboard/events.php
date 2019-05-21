@@ -115,6 +115,39 @@
                 <br />
             </div>
             <div class="row">
+                <div class="col-12">
+                <label>Location</label>
+                </div>
+                <div class="col-2">
+                    <input class="form-control" type="text" name="street_number" placeholder="#" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="street_name" placeholder="Street Name" />
+                </div>
+                <div class="col-4">
+                    <input class="form-control" type="text" name="street_type" placeholder="Street Type" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="text" name="suburb" placeholder="Suburb" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="state" placeholder="State" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="text" name="country" placeholder="Country" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="postcode" placeholder="Postcode"/>
+                </div>
+            </div>
+            <div class="row">
+                <br />
+            </div>
+            <div class="row">
                 <div class="col-6">
                     <label>Price Per Ticket</label>
                     <input class="form-control" type="text" name="event_price" />
@@ -275,6 +308,39 @@
                 <br />
             </div>
             <div class="row">
+                <div class="col-12">
+                <label>Location</label>
+                </div>
+                <div class="col-2">
+                    <input class="form-control" type="text" name="street_number" value="<?php echo $data['event']->street_number; ?>" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="street_name" value="<?php echo $data['event']->street_name; ?>" />
+                </div>
+                <div class="col-4">
+                    <input class="form-control" type="text" name="street_type" value="<?php echo $data['event']->street_type; ?>" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="text" name="suburb" value="<?php echo $data['event']->suburb; ?>" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="state" value="<?php echo $data['event']->state; ?>" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" type="text" name="country" value="<?php echo $data['event']->country; ?>" />
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="postcode" value="<?php echo $data['event']->postcode; ?>" />
+                </div>
+            </div>
+            <div class="row">
+                <br />
+            </div>
+            <div class="row">
                 <div class="col-6">
                     <label>Price Per Ticket</label>
                     <input class="form-control" type="text" name="event_price"  value="<?php echo $data['event']->event_price; ?>"/>
@@ -302,7 +368,7 @@
                     <select class="form-control" name="category_name">
                         <option value="" disabled>-</option>
                         <?php foreach($data['categories'] as $category): ?>
-                            <option><?php echo $category->category_name; ?></option>
+                            <option><?php echo $category->name; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -332,16 +398,34 @@
         <?php else: ?>
 
             <h3>Your Events</h3>
-            <a href="events?type=create" class="members-link">Create New Event</a>
             <hr/>
+            <div class="row">
+                <div class="col-12 text-right">
+                <a href="events?type=create" class="dashboard-link">Create New Event</a>
+                </div>
+            </div>
+            <br />
+            <?php if (isset($data['errors'])): ?>
+                <div style="border: solid 1px red; border-radius: 5px; padding: 10px; color: red;" class="error-message row">
+                <div class="col-12">
+                <?php foreach($data['errors'] as $error){
+                    echo  $error . '<br />';
+                }
+                ?>
+                </div>
+                
+                </div>
+                <br />
+            <?php endif; ?>
+
             <?php foreach($data['user_events'] as $event): ?>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-7">
                         <p><?php echo $event->event_name; ?></p>
                     </div>
-                    <div class="col-3 text-right">
-                        <a href="events?type=edit&event_id=<?php echo $event->event_id; ?>" class="members-link">Edit</a>
-                        <a href="events?type=delete&event_id=<?php echo $event->event_id; ?>" class="members-link">Delete</a>
+                    <div class="col-5 text-right">
+                        <a href="events?type=edit&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Edit</a>
+                        <a href="events?type=delete&event_id=<?php echo $event->event_id; ?>" class="dashboard-link">Delete</a>
                     </div>
                     <hr />
                 </div>

@@ -57,7 +57,7 @@
 
     public function createEvent($eventData) {
 
-      $this->db->query('INSERT INTO events (event_name, start_date, end_date, event_price, tickets_available, event_description, is_featured, category_id, user_id, event_image) VALUES (:event_name, :start_date, :end_date, :event_price, :tickets_available, :event_description, :is_featured, :category_id, :user_id, :event_image)');
+      $this->db->query('INSERT INTO events (event_name, start_date, end_date, event_price, tickets_available, event_description, is_featured, category_id, user_id, event_image, street_number, street_name, street_type, suburb, state, country, postcode) VALUES (:event_name, :start_date, :end_date, :event_price, :tickets_available, :event_description, :is_featured, :category_id, :user_id, :event_image, :street_number, :street_name, :street_type, :suburb, :state, :country, :postcode)');
 
       //bind values
       $this->db->bind(':event_name', $eventData['event_name']);
@@ -70,6 +70,13 @@
       $this->db->bind(':category_id', $eventData['category_id']);
       $this->db->bind(':user_id', $eventData['user_id']);
       $this->db->bind(':event_image', $eventData['event_image']);
+      $this->db->bind(':street_number', $eventData['street_number']);
+      $this->db->bind(':street_name', $eventData['street_name']);
+      $this->db->bind(':street_type', $eventData['street_type']);
+      $this->db->bind(':suburb', $eventData['suburb']);
+      $this->db->bind(':state', $eventData['state']);
+      $this->db->bind(':country', $eventData['country']);
+      $this->db->bind(':postcode', $eventData['postcode']);
 
       $this->db->execute();
     }
