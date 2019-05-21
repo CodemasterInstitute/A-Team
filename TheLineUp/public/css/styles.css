@@ -13,9 +13,10 @@ p {
 body {
   background-color: #f9fbfc;
   padding-top: 78px;
-  position: relative;
-  padding-bottom: 356px;
-  min-height: 100vh;
+}
+
+main {
+  min-height: calc(100vh - 357px - 80px);
 }
 
 .carousel-fade .carousel-inner .carousel-item img {
@@ -637,7 +638,6 @@ a#forgot_pswd {
 
 footer {
   background-color: #343a40;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
