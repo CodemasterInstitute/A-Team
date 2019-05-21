@@ -1,21 +1,23 @@
-const searchContainer = document.querySelector('.search-container');
-const searchBtn = document.querySelector('.search-btn');
-const categoryGridList = document.querySelectorAll('a.gallery');
-const nameField = document.querySelector('.name-search');
-const nameAutocomplete = document.querySelector('#name-autocomplete');
-const locationField = document.querySelector('.location-search');
-const locationAutocomplete = document.querySelector('#location-autocomplete');
-const baseUrl = window.location.origin;
+const searchContainer = document.querySelector(".search-container");
+const searchBtn = document.querySelector(".search-btn");
+const categoryGridList = document.querySelectorAll("a.gallery");
+const nameField = document.querySelector(".name-search");
+const nameAutocomplete = document.querySelector("#name-autocomplete");
+const locationField = document.querySelector(".location-search");
+const locationAutocomplete = document.querySelector("#location-autocomplete");
+let names;
+let locations;
 let searchQuery = [];
+const baseUrl = window.location.origin;
 
 //Add search functionality to category grid
 
 categoryGridList.forEach(el => {
-  el.addEventListener('click', (e) => {
+  el.addEventListener("click", e => {
     e.preventDefault();
     searchQuery.category = el.dataset.categoryId;
-    searchResults('search');
-  })
+    searchResults("search");
+  });
 });
 
 //Populate category options from database
@@ -29,16 +31,18 @@ let categoryList = () => {
       }
     })
     .then(res => res.json())
-    .then((data) => {
+    .then(data => {
       data.forEach(el => {
-        document.querySelector('.category-search').innerHTML += `<option value=${el.category_id}>${el.name}</option>`;
+        document.querySelector(
+          ".category-search"
+        ).innerHTML += `<option value=${el.category_id}>${el.name}</option>`;
       });
-    })
-}
+    });
+};
 
 //Search database from search input
 
-let searchResults = (query) => {
+let searchResults = query => {
   searchContainer.innerHTML = `<h1>Upcoming Events</h1>
                                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
   fetch(`${baseUrl}/events/${query}`, {
@@ -54,22 +58,26 @@ let searchResults = (query) => {
       })
     })
     .then(res => res.json())
-    .then((data) => {
-      searchContainer.innerHTML = `<h1>Upcoming Events</h1>`
+    .then(data => {
+      searchContainer.innerHTML = `<h1>Upcoming Events</h1>`;
       if (data.length < 1) {
-        searchContainer.innerHTML += '<p>No results found</p>';
+        searchContainer.innerHTML += "<p>No results found</p>";
       } else {
-
         data.forEach(el => {
-          searchContainer.innerHTML +=
-            `<div class="event-card col-lg-8">
+          searchContainer.innerHTML += `<div class="event-card col-lg-8">
               <div class="card-image">
-              <img src="../img/events/${el.event_image}" alt="Card image for: ${el.event_name}" />
+              <img src="../img/events/${el.event_image}" alt="Card image for: ${
+            el.event_name
+          }" />
             </div>
             <div class="card-content">
               <div class="card-title">${el.event_name}</div>
               <div class="card-description">
-                ${truncate_text(el.event_description)} <a href="${baseUrl}/pages/event?id=${el.event_id}">Find out more</a>
+                ${truncate_text(
+                  el.event_description
+                )} <a href="${baseUrl}/pages/event?id=${
+            el.event_id
+          }">Find out more</a>
               </div>
               <div class="event-details">
                 <p>${el.start_date}</p>
@@ -77,94 +85,230 @@ let searchResults = (query) => {
                 <p>$${el.event_price}</p>
               </div>
               </div>
-            </div>`
+            </div>`;
         });
       }
     });
-}
+};
 
 //Add autocomplete to search fields from database
+if (nameField) {
+  nameField.addEventListener("input", () => searchNames(nameField.value));
+  locationField.addEventListener("input", () =>
+    searchLocations(locationField.value)
+  );
+}
 
-nameField.addEventListener('input', () => searchNames(nameField.value));
-locationField.addEventListener('input', () => searchLocations(locationField.value));
 
-const searchNames = async input => {
-  const res = await fetch(`${baseUrl}/events/eventNames`)
-  const names = await res.json();
+const getNames = async () => {
+  const res = await fetch(`${baseUrl}/events/eventNames`);
+  names = await res.json();
+};
 
+const searchNames = input => {
   let matches = names.filter(name => {
-    const regex = new RegExp(`^${input}`, 'gi');
+    const regex = new RegExp(`^${input}`, "gi");
     return name.event_name.match(regex);
   });
 
   if (input.length === 0) {
     matches = [];
-    nameAutocomplete.innerHTML = '';
+    nameAutocomplete.innerHTML = "";
   }
 
   outputName(matches);
+  let nameOptions = document.querySelectorAll(".autocomplete-name");
+
+  nameOptions.forEach(el => {
+    el.addEventListener("click", () => {
+      // console.log(el.previousSibling);
+      nameField.value = el.innerHTML;
+      nameAutocomplete.innerHTML = "";
+    });
+  });
 };
 
-const searchLocations = async input => {
-  const res = await fetch(`${baseUrl}/events/locations`)
-  const locations = await res.json();
+const getLocations = async () => {
+  const res = await fetch(`${baseUrl}/events/locations`);
+  locations = await res.json();
+};
 
+const searchLocations = input => {
   let matches = locations.filter(location => {
-    const regex = new RegExp(`^${input}`, 'gi');
+    const regex = new RegExp(`^${input}`, "gi");
     return location.suburb.match(regex);
   });
 
   if (input.length === 0) {
     matches = [];
-    locationAutocomplete.innerHTML = '';
+    locationAutocomplete.innerHTML = "";
   }
 
   outputLocation(matches);
-  // console.log(matches);
+  let locationOptions = document.querySelectorAll(".autocomplete-location");
+
+  locationOptions.forEach(el => {
+    el.addEventListener("click", () => {
+      // console.log(el.previousSibling);
+      locationField.value = el.innerHTML;
+      locationAutocomplete.innerHTML = "";
+    });
+  });
 };
 
 const outputName = matches => {
   if (matches.length > 0) {
-    const html = matches.map(match => `
-      <div>${match.event_name}<div>
-    `).join('');
+    const html = matches
+      .map(
+        match => `
+      <div class="autocomplete-name">${match.event_name}</div>
+    `
+      )
+      .join("");
 
     nameAutocomplete.innerHTML = html;
   }
-}
+};
 
 const outputLocation = matches => {
   if (matches.length > 0) {
-    const html = matches.map(match => `
-      <div>${match.suburb}<div>
-    `).join('');
+    const html = matches
+      .map(
+        match => `
+      <div class="autocomplete-location">${match.suburb}</div>
+    `
+      )
+      .join("");
 
     locationAutocomplete.innerHTML = html;
   }
-}
+};
+
+window.addEventListener("keydown", e => {
+  switch (e.keyCode) {
+    case 38:
+      moveUp();
+      break;
+    case 40:
+      moveDown();
+      break;
+  }
+});
+
+let moveUp = () => {
+  let list;
+  if (nameField === document.activeElement) {
+    list = nameAutocomplete.children;
+  }
+  if (locationField === document.activeElement) {
+    list = locationAutocomplete.children;
+  }
+  list = Array.from(list);
+  for (let i = 0; i < list.length; i++) {
+    if (!list[i].nextElementSibling && !list[i].classList.contains('selected-check')) {
+      list[i].classList.add('selected');
+      return;
+    }
+    if (list[i].nextElementSibling && list[i].nextElementSibling.classList.contains('selected')) {
+      list[i].classList.add('selected');
+      list[i].nextElementSibling.classList.remove('selected');
+      return;
+    }
+    if (list.length === 1) {
+      list[i].classList.toggle('selected');
+      return;
+    }
+    if (!list[i].previousElementSibling && list[i].classList.contains('selected')) {
+      list[list.length - 1].classList.add('selected');
+      list[i].classList.remove('selected');
+      return;
+    }
+  };
+};
+
+let moveDown = () => {
+  let list;
+  if (nameField === document.activeElement) {
+    list = nameAutocomplete.children;
+  }
+  if (locationField === document.activeElement) {
+    list = locationAutocomplete.children;
+  }
+  list = Array.from(list);
+  for (let i = 0; i < list.length; i++) {
+    if (!list[i].previousElementSibling && !list[i].classList.contains('selected-check')) {
+      list[i].classList.add('selected');
+      list[i].classList.add('selected-check');
+      return;
+    }
+    if (list[i].previousElementSibling && list[i].previousElementSibling.classList.contains('selected')) {
+      list[i].classList.add('selected');
+      list[i].previousElementSibling.classList.remove('selected');
+      return;
+    }
+    if (list.length === 1) {
+      list[i].classList.toggle('selected');
+      return;
+    }
+    if (!list[i].nextElementSibling) {
+      list[0].classList.add('selected');
+      list[i].classList.remove('selected');
+      return;
+    }
+  };
+};
 
 //Add event listener if the button exists
 
 if (searchBtn) {
-  searchBtn.addEventListener('click', (e) => {
+  searchBtn.addEventListener("click", e => {
     e.preventDefault();
-    searchQuery.name = document.querySelector('.name-search').value;
-    searchQuery.location = document.querySelector('.location-search').value;
-    searchQuery.category = document.querySelector('.category-search').value;
+    searchQuery.name = document.querySelector(".name-search").value;
+    searchQuery.location = document.querySelector(".location-search").value;
+    searchQuery.category = document.querySelector(".category-search").value;
 
-    if (searchQuery.name === '' && searchQuery.location === '' && searchQuery.category === 'All') {
-      searchResults('all');
+    if (
+      searchQuery.name === "" &&
+      searchQuery.location === "" &&
+      searchQuery.category === "All"
+    ) {
+      searchResults("all");
     } else {
-      searchResults('search');
+      searchResults("search");
     }
-  })
-}
+  });
+  document.addEventListener('keypress', (e) => {
+    if (e.keyCode === 13) {
+      if (nameField === document.activeElement && nameAutocomplete.children.length > 0) {
+        e.preventDefault();
+        nameField.value = document.querySelector('.selected').innerHTML;
+        nameAutocomplete.innerHTML = '';
+      }
+      if (locationField === document.activeElement && locationAutocomplete.children.length > 0) {
+        e.preventDefault();
+        locationField.value = document.querySelector('.selected').innerHTML;
+        locationAutocomplete.innerHTML = '';
+      }
+    }
+  });
+  document.addEventListener('click', () => {
+    if (nameField === document.activeElement) {
+      locationAutocomplete.innerHTML = '';
+    }
+    if (locationField === document.activeElement) {
+      nameAutocomplete.innerHTML = '';
+    }
+  });
 
+}
 
 if (categoryGridList.length > 0) {
-  categoryList();
+  window.addEventListener("DOMContentLoaded", () => {
+    getNames();
+    getLocations();
+    categoryList();
+  });
 }
-
 
 //Truncate function to trim paragraph lengths
 
@@ -173,7 +317,7 @@ let truncate_text = (str, length, ending) => {
     length = 150;
   }
   if (ending == null) {
-    ending = '...';
+    ending = "...";
   }
   if (str.length > length) {
     return str.substring(0, length - ending.length) + ending;

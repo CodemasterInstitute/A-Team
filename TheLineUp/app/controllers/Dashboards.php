@@ -5,18 +5,27 @@
     }
     
     public function index(){
-      $data = [
-        'title' => 'Dashboard',
-      ];
+      
+      if (!isset($_SESSION['user'])) {
+
+        redirect('users/login');
+
+      } else {
+        $data = [
+          'title' => 'Dashboard',
+        ];
+      }
      
       $this->view('dashboard/index', $data);
     }
 
     public function details(){
 
-      $user = $_SESSION['user'];
+      if (!isset($_SESSION['user'])) {
 
-      if (isset($_POST['type']) && $_POST['type'] == 'edit'){
+        redirect('users/login');
+
+      } else if (isset($_POST['type']) && $_POST['type'] == 'edit'){
 
         $updateData = [
           'user_id' => $_SESSION['user']->user_id,
@@ -48,7 +57,7 @@
       }
 
       $data = [
-        'user' => $user
+        'user' => $_SESSION['user']
       ];
 
       $this->view('dashboard/details', $data);
@@ -56,9 +65,11 @@
 
     public function events(){
 
-      $user = $_SESSION['user'];
+      if (!isset($_SESSION['user'])) {
 
-      if (isset($_GET['type']) && $_GET['type'] == 'create'){
+        redirect('users/login');
+
+      } else if (isset($_GET['type']) && $_GET['type'] == 'create'){
       
         $categories = $this->dashboardModel->categories();
         $data['categories'] = $categories;
@@ -146,6 +157,7 @@
           $this->dashboardModel->createEvent($eventData);
         }
 
+        $user = $_SESSION['user'];
         $userEvents = $this->dashboardModel->userEvents($user->user_id);
         $data['user_events'] = $userEvents;
 
@@ -162,10 +174,30 @@
     }
 
     public function orders(){
+      
+      if (!isset($_SESSION['user'])) {
 
-        $data = [
-          'title' => 'Your Orders'
-        ];
+        redirect('users/login');
+
+      } else if (isset($_POST['type']) && $_POST['type'] == 'order'){
+
+        // Add event id to user 'event_ids'
+        $this->dashboardModel->addOrder($_SESSION['user']->user_id, $_POST['event_id']);
+        $data = array();
+        redirect('dashboards/orders');
+
+
+      } else if (isset($_GET['event_id'])) {
+        
+        $event = $this->dashboardModel->event($_GET['event_id']);
+        $data['event'] = $event;
+        
+      } else {
+
+        // Get all orders
+        $orders = $this->dashboardModel->getOrders($_SESSION['user']->user_id);
+        $data['orders'] = $orders;
+      }
         $this->view('dashboard/orders', $data);
       }
   }
