@@ -44,3 +44,8 @@
   .nav-link:hover::before {
     width: 100%;
   }
+
+  .navbar-collapse.collapse.show{
+    background-color: $accent-color1;
+ 
+  }
