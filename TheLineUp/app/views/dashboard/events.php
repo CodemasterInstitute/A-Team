@@ -302,7 +302,7 @@
                     <select class="form-control" name="category_name">
                         <option value="" disabled>-</option>
                         <?php foreach($data['categories'] as $category): ?>
-                            <option><?php echo $category->category_name; ?></option>
+                            <option><?php echo $category->name; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
