@@ -1,6 +1,15 @@
+.dashboard-container {
+    padding: 5%;
+}
+
+.dashboard.nav .nav-item .nav-link{
+    color: #DF0049;
+}
+
+
+
 .dashboard-title {
-    margin: 20px 0 20px 0;
-    border-bottom: solid 1px lightgrey;
+    margin-top: 15px;
 }
 
 .dashboard-form {
@@ -26,7 +35,7 @@
 
 .dashboard-link, .dashboard-link:hover {
     color: black;
-    margin: 10px 15px 10px 0;
+    margin: 20px 15px 20px 0;
     border: solid 1px black;
     border-radius: 5px;
     padding: 5px 10px;

@@ -2,18 +2,18 @@
     background-color: $accent-color1!important;
 }
 
-.navbar{
+.navbar.main{
   height: 80px;
   padding:0;
 }
 
-li.nav-item{
+li.nav-item.main{
   background-color: $accent-color1;
 }
 
 
 
-.nav-link {
+.nav-link.main {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -25,14 +25,14 @@ li.nav-item{
     
   }
   
-  .navbar-dark .navbar-nav .nav-link{
+  .navbar-dark.main .navbar-nav.main .nav-link.main{
       color:$secondry-color;
   }
-  .nav-link:hover {
+  .nav-link.main:hover {
     opacity: 1;
   }
   
-  .nav-link::before {
+  .nav-link.main::before {
     transition: 500ms;
     height: 2px;
     content: "";
@@ -40,12 +40,12 @@ li.nav-item{
     background-color:black;
   }
   
-  .nav-link::before {
+  .nav-link.main::before {
     width: 0%;
     bottom: 10px;
   }
   
-  .nav-link:hover::before {
+  .nav-link.main:hover::before {
     width: 100%;
   }
 
