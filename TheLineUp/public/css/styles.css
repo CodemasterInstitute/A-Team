@@ -349,6 +349,19 @@ i {
   text-align: center;
 }
 
+.card-group.ads {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card.ad {
+  margin: 20px !important;
+}
+
+.card.ad .card-body.ad {
+  padding: 30px;
+}
+
 .col-md-6.col-md-offset-3#contact {
   margin: 0 auto;
 }
@@ -593,7 +606,7 @@ footer {
 }
 
 footer h4 {
-  color: #e0004a;
+  color: #f9fbfc;
 }
 
 footer .col-sm-4 {
