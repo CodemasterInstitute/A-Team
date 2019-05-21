@@ -34,7 +34,7 @@
                         <p><?php echo $order->event_name; ?></p>
                     </div>
                     <div class="col-3">
-                        <a href="<?php echo URLROOT . '/pages/event?id=' . $order->event_id; ?>">View Event</a>
+                        <a class="dashboard-link" href="<?php echo URLROOT . '/pages/event?id=' . $order->event_id; ?>">View Event</a>
                     </div>
                     <hr />
                 </div>
