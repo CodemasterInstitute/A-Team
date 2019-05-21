@@ -332,6 +332,24 @@ a.col-md-4.gallery {
   filter: grayscale(0);
 }
 
+.carousel-caption.lowdown {
+  bottom: 160px !important;
+  font-weight: bold !important;
+}
+
+.carousel-caption.lowdown.white {
+  color: black;
+}
+
+.carousel-item img#contact-light {
+  opacity: 0.6;
+}
+
+.container.contact-info h3 {
+  text-align: center;
+  padding: 20px;
+}
+
 .card .contact {
   border: none;
   text-decoration: none;

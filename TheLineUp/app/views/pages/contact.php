@@ -1,9 +1,35 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<div class="jumbotron jumbotron-fluid post">
-  <div class="container">
-    <h1 class="display-4">The Low Down</h1>
-    <h3>Whether you're an event organiser, attendee or advertiser, <br>here is all of the info you need in the one place</h3>
+<div class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="<?php echo URLROOT  . '/img/contact/rachel-lynette-french-609252-unsplash.jpg' ?>" alt="First-contact slide">
+      <div class="carousel-caption d-none d-md-block lowdown">
+      <h1 class="display-4">The Low Down</h1>
   </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" id="contact-light" src="<?php echo URLROOT  . '/img/contact/sander-dalhuisen-713356-unsplash.jpg' ?>" alt="Second-contact slide">
+      <div class="carousel-caption d-none d-md-block lowdown white">
+      <h1 class="display-4 .contact-light">The Low Down</h1>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php echo URLROOT  . '/img/contact/becky-phan-23122-unsplash.jpg' ?>" alt="Third-contact slide">
+      <div class="carousel-caption d-none d-md-block lowdown">
+      <h1 class="display-4">The Low Down</h1>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" id="contact-light" src="<?php echo URLROOT  . '/img/contact/nils-stahl-188467-unsplash.jpg' ?>" alt="Fourth-contact slide">
+      <div class="carousel-caption d-none d-md-block lowdown white">
+      <h1 class="display-4">The Low Down</h1>
+  </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container contact-info">
+    <h3>Whether you're an event organiser, attendee or advertiser, <br>here is all of the info you need in the one place</h3>
   </div>
 
 <!-- Anchor cards to click down to the section you want info about -->
