@@ -381,6 +381,7 @@ a.col-md-4.gallery {
 .container.contact-info h3 {
   text-align: center;
   padding: 20px;
+  font-style: italic;
 }
 
 .card .contact {
