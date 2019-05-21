@@ -29,6 +29,7 @@ main {
   padding: 2rem;
   z-index: 10;
   -webkit-transform: translateY(55px);
+      -ms-transform: translateY(55px);
           transform: translateY(55px);
 }
 
@@ -43,6 +44,13 @@ main {
   border: 1px solid #ccc;
   height: calc(3rem + 2px) !important;
   border-radius: 0;
+  position: relative;
+}
+
+.search-field:focus {
+  border-color: #cccccc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .wrn-btn {
@@ -65,6 +73,7 @@ main {
 @media (max-width: 992px) {
   .search-sec {
     -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
             transform: translateY(0);
     background: #f9fbfc;
   }
@@ -76,6 +85,7 @@ main {
 
 .card-container h1 {
   -webkit-transform: translateY(-45px);
+      -ms-transform: translateY(-45px);
           transform: translateY(-45px);
 }
 
@@ -136,15 +146,34 @@ main {
 }
 
 .selected {
-  background: blue;
+  background: #44bba4 !important;
   color: white;
+}
+
+#name-autocomplete,
+#location-autocomplete {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.autocomplete-location,
+.autocomplete-name {
+  background: white;
+  padding: 2px;
+  padding-left: 5px;
 }
 
 .autocomplete-name:hover,
 .autocomplete-location:hover {
   cursor: pointer;
-  background: blue;
+  background: #44bba4;
   color: white;
+}
+
+.hidden {
+  display: none;
 }
 
 .lds-ring {
@@ -244,6 +273,7 @@ main {
 
 .jumbotron.post {
   background-image: -webkit-gradient(linear, right top, left top, from(#000000), to(#7F8C8D));
+  background-image: -o-linear-gradient(right, #000000, #7F8C8D);
   background-image: linear-gradient(-90deg, #000000, #7F8C8D);
   text-align: center;
   margin: 0 auto;
@@ -279,6 +309,7 @@ main {
 
 .nav-link::before {
   -webkit-transition: 500ms;
+  -o-transition: 500ms;
   transition: 500ms;
   height: 2px;
   content: "";
@@ -325,6 +356,7 @@ a.col-md-4.gallery {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -444,6 +476,7 @@ input {
   -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 

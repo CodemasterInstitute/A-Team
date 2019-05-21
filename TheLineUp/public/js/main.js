@@ -119,6 +119,7 @@ const searchNames = input => {
 
   if (input.length === 0) {
     matches = [];
+    nameAutocomplete.classList.add('hidden');
     nameAutocomplete.innerHTML = "";
   }
 
@@ -129,6 +130,7 @@ const searchNames = input => {
     el.addEventListener("click", () => {
       // console.log(el.previousSibling);
       nameField.value = el.innerHTML;
+      nameAutocomplete.classList.add('hidden');
       nameAutocomplete.innerHTML = "";
     });
   });
@@ -154,6 +156,7 @@ const searchLocations = input => {
   if (input.length === 0) {
     matches = [];
     locationAutocomplete.innerHTML = "";
+    locationAutocomplete.classList.add('hidden');
   }
 
   outputLocation(matches);
@@ -161,9 +164,9 @@ const searchLocations = input => {
 
   locationOptions.forEach(el => {
     el.addEventListener("click", () => {
-      // console.log(el.previousSibling);
       locationField.value = el.innerHTML;
       locationAutocomplete.innerHTML = "";
+      locationAutocomplete.classList.add('hidden');
     });
   });
 };
@@ -177,7 +180,7 @@ const outputName = matches => {
     `
       )
       .join("");
-
+    nameAutocomplete.classList.remove('hidden');
     nameAutocomplete.innerHTML = html;
   }
 };
@@ -188,10 +191,11 @@ const outputLocation = matches => {
       .map(
         match => `
       <div class="autocomplete-location">${match.suburb}</div>
-    `
+      `
       )
       .join("");
 
+    locationAutocomplete.classList.remove('hidden');
     locationAutocomplete.innerHTML = html;
   }
 };
@@ -200,8 +204,10 @@ window.addEventListener("keydown", e => {
   if (e.keyCode === 9) {
     if (nameField === document.activeElement && nameAutocomplete.children.length > 0) {
       nameAutocomplete.innerHTML = '';
+      nameAutocomplete.classList.add('hidden');
     }
     if (locationField === document.activeElement && locationAutocomplete.children.length > 0) {
+      locationAutocomplete.classList.add('hidden');
       locationAutocomplete.innerHTML = '';
     }
   }
@@ -312,6 +318,7 @@ if (searchBtn) {
           e.preventDefault();
           locationField.value = document.querySelector('.selected').innerHTML;
         }
+        locationAutocomplete.classList.add('hidden');
         locationAutocomplete.innerHTML = '';
       }
 
@@ -319,9 +326,11 @@ if (searchBtn) {
   });
   document.addEventListener('click', () => {
     if (nameField === document.activeElement) {
+      locationAutocomplete.classList.add('hidden');
       locationAutocomplete.innerHTML = '';
     }
     if (locationField === document.activeElement) {
+      nameAutocomplete.classList.add('hidden');
       nameAutocomplete.innerHTML = '';
     }
   });
