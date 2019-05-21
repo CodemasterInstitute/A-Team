@@ -101,7 +101,13 @@ if (nameField) {
 
 
 const getNames = async () => {
-  const res = await fetch(`${baseUrl}/events/eventNames`);
+  const res = await fetch(`${baseUrl}/events/eventNames`, {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    }
+  });
   names = await res.json();
 };
 
@@ -129,7 +135,13 @@ const searchNames = input => {
 };
 
 const getLocations = async () => {
-  const res = await fetch(`${baseUrl}/events/locations`);
+  const res = await fetch(`${baseUrl}/events/locations`, {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    }
+  });
   locations = await res.json();
 };
 
@@ -185,6 +197,15 @@ const outputLocation = matches => {
 };
 
 window.addEventListener("keydown", e => {
+  if (e.keyCode === 9) {
+    if (nameField === document.activeElement && nameAutocomplete.children.length > 0) {
+      nameAutocomplete.innerHTML = '';
+    }
+    if (locationField === document.activeElement && locationAutocomplete.children.length > 0) {
+      locationAutocomplete.innerHTML = '';
+    }
+  }
+
   switch (e.keyCode) {
     case 38:
       moveUp();
@@ -280,15 +301,20 @@ if (searchBtn) {
   document.addEventListener('keypress', (e) => {
     if (e.keyCode === 13) {
       if (nameField === document.activeElement && nameAutocomplete.children.length > 0) {
-        e.preventDefault();
-        nameField.value = document.querySelector('.selected').innerHTML;
+        if (document.querySelector('.selected')) {
+          e.preventDefault();
+          nameField.value = document.querySelector('.selected').innerHTML;
+        }
         nameAutocomplete.innerHTML = '';
       }
       if (locationField === document.activeElement && locationAutocomplete.children.length > 0) {
-        e.preventDefault();
-        locationField.value = document.querySelector('.selected').innerHTML;
+        if (document.querySelector('.selected')) {
+          e.preventDefault();
+          locationField.value = document.querySelector('.selected').innerHTML;
+        }
         locationAutocomplete.innerHTML = '';
       }
+
     }
   });
   document.addEventListener('click', () => {
